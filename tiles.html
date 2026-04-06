@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--
+=========================================================
+HOW TO ADD A NEW PRODUCT (TILES)
+1) Copy one complete <div class="product-card"> ... </div> block.
+2) Paste it below the comment: ADD NEW PRODUCTS HERE.
+3) Change ONLY these 4 values:
+   - data-category="floor-tiles" (or wall-tiles/outdoor/designer/vitrified/ceramic)
+   - image src="images/tiles/tile-21.jpg"
+   - product name inside <h3> ... </h3>
+   - size/finish text inside <p class="muted"> ... </p>
+4) Save this file. Done.
+=========================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Home Enterprises | Tiles Collection</title>
+    <!-- To add a new product, duplicate one .product-card block in the grid below. -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A0%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo">Dream Home</a>
+        <button class="menu-toggle" aria-label="Open navigation">☰</button>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a class="active" href="tiles.html">Tiles</a>
+          <a href="bathware.html">Bathware</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section catalog-header">
+      <div class="container">
+        <h1 class="section-title">Tiles Collection</h1>
+        <p class="section-subtitle">
+          Premium floor, wall, and designer tiles for modern interiors and
+          durable outdoor spaces.
+        </p>
+        <p class="products-hint">
+          Hover on any product card to enlarge it and reveal its description.
+        </p>
+
+        <div class="filter-bar" data-target="#tiles-grid">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="floor-tiles">Floor Tiles</button>
+          <button class="filter-btn" data-filter="wall-tiles">Wall Tiles</button>
+          <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+          <button class="filter-btn" data-filter="designer">Designer</button>
+          <button class="filter-btn" data-filter="vitrified">Vitrified</button>
+          <button class="filter-btn" data-filter="ceramic">Ceramic</button>
+        </div>
+
+        <section id="tiles-grid" class="products-grid">
+          <!-- ADD NEW PRODUCTS HERE — duplicate a card block below -->
+          <div class="product-card" data-category="floor-tiles">
+            <img src="images/tiles/tile-01.jpg" alt="Tile 01" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Floor Tiles</span>
+              <h3>Calacatta Marble Effect - 600x600mm</h3>
+              <p class="muted">Size: 600x600mm | Finish: Glossy</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="wall-tiles">
+            <img src="images/tiles/tile-02.jpg" alt="Tile 02" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Wall Tiles</span>
+              <h3>Soft Stone Beige - 300x600mm</h3>
+              <p class="muted">Size: 300x600mm | Finish: Satin</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="outdoor">
+            <img src="images/tiles/tile-03.jpg" alt="Tile 03" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Outdoor</span>
+              <h3>Rustic Paver Grey - 400x400mm</h3>
+              <p class="muted">Size: 400x400mm | Finish: Anti-Skid</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="designer">
+            <img src="images/tiles/tile-04.jpg" alt="Tile 04" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Designer</span>
+              <h3>Geometric Luxe Pattern - 600x1200mm</h3>
+              <p class="muted">Size: 600x1200mm | Finish: Matt</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="vitrified">
+            <img src="images/tiles/tile-05.jpg" alt="Tile 05" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Vitrified</span>
+              <h3>Ivory Terra Slab - 800x800mm</h3>
+              <p class="muted">Size: 800x800mm | Finish: Polished</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="ceramic">
+            <img src="images/tiles/tile-06.jpg" alt="Tile 06" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Ceramic</span>
+              <h3>Classic Pearl White - 300x300mm</h3>
+              <p class="muted">Size: 300x300mm | Finish: Gloss</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="floor-tiles">
+            <img src="images/tiles/tile-07.jpg" alt="Tile 07" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Floor Tiles</span>
+              <h3>Urban Cement Tone - 600x600mm</h3>
+              <p class="muted">Size: 600x600mm | Finish: Matt</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="wall-tiles">
+            <img src="images/tiles/tile-08.jpg" alt="Tile 08" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Wall Tiles</span>
+              <h3>Ocean Mist Blue - 300x600mm</h3>
+              <p class="muted">Size: 300x600mm | Finish: Glossy</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="outdoor">
+            <img src="images/tiles/tile-09.jpg" alt="Tile 09" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Outdoor</span>
+              <h3>Granite Walkway Dark - 600x600mm</h3>
+              <p class="muted">Size: 600x600mm | Finish: Rough</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="designer">
+            <img src="images/tiles/tile-10.jpg" alt="Tile 10" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Designer</span>
+              <h3>Moroccan Motif Gold - 300x300mm</h3>
+              <p class="muted">Size: 300x300mm | Finish: Matt</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="vitrified">
+            <img src="images/tiles/tile-11.jpg" alt="Tile 11" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Vitrified</span>
+              <h3>Moonlit Ash - 600x1200mm</h3>
+              <p class="muted">Size: 600x1200mm | Finish: Lappato</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="ceramic">
+            <img src="images/tiles/tile-12.jpg" alt="Tile 12" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Ceramic</span>
+              <h3>Rose Quartz Blush - 300x450mm</h3>
+              <p class="muted">Size: 300x450mm | Finish: Gloss</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="floor-tiles">
+            <img src="images/tiles/tile-13.jpg" alt="Tile 13" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Floor Tiles</span>
+              <h3>Natural Oak Woodlook - 200x1200mm</h3>
+              <p class="muted">Size: 200x1200mm | Finish: Matt</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="wall-tiles">
+            <img src="images/tiles/tile-14.jpg" alt="Tile 14" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Wall Tiles</span>
+              <h3>Subway Chic White - 100x300mm</h3>
+              <p class="muted">Size: 100x300mm | Finish: Glossy</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="outdoor">
+            <img src="images/tiles/tile-15.jpg" alt="Tile 15" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Outdoor</span>
+              <h3>Terrace Stone Brown - 600x600mm</h3>
+              <p class="muted">Size: 600x600mm | Finish: Textured</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="designer">
+            <img src="images/tiles/tile-16.jpg" alt="Tile 16" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Designer</span>
+              <h3>Art Deco Charcoal - 600x600mm</h3>
+              <p class="muted">Size: 600x600mm | Finish: Satin</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="vitrified">
+            <img src="images/tiles/tile-17.jpg" alt="Tile 17" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Vitrified</span>
+              <h3>Silver Vein Luxury - 800x1600mm</h3>
+              <p class="muted">Size: 800x1600mm | Finish: High Polish</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="ceramic">
+            <img src="images/tiles/tile-18.jpg" alt="Tile 18" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Ceramic</span>
+              <h3>Pastel Wave Green - 300x600mm</h3>
+              <p class="muted">Size: 300x600mm | Finish: Gloss</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="floor-tiles">
+            <img src="images/tiles/tile-19.jpg" alt="Tile 19" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Floor Tiles</span>
+              <h3>Concrete Loft Grey - 600x1200mm</h3>
+              <p class="muted">Size: 600x1200mm | Finish: Matt</p>
+              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="wall-tiles">
+            <img src="images/tiles/tile-20.jpg" alt="Tile 20" loading="lazy" />
+            <div class="card-body">
+              <span class="badge">Wall Tiles</span>
+              <h3>Elegant Ripple Cream - 300x600mm</h3>
+              <p class="muted">Size: 300x600mm | Finish: Satin</p>
+              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <strong>Dream Home Enterprises</strong>
+        <span>Jammalamadugu, Andhra Pradesh, India</span>
+        <a href="https://maps.app.goo.gl/wJz6Hptb7gxwZo6w9" target="_blank"
+          >View on Map</a
+        >
+        <span>© 2026 Dream Home Enterprises. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
