@@ -1,4 +1,67 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const themeToggleButtons = document.querySelectorAll(".theme-toggle");
+  const THEME_STORAGE_KEY = "dreamhome-theme";
+
+  const applyTheme = (theme) => {
+    const useLight = theme === "light";
+    document.body.classList.toggle("light-theme", useLight);
+
+    themeToggleButtons.forEach((button) => {
+      button.textContent = useLight ? "Dark Mode" : "Light Mode";
+      button.setAttribute(
+        "aria-label",
+        useLight ? "Switch to dark mode" : "Switch to light mode"
+      );
+    });
+  };
+
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+  applyTheme(savedTheme === "light" ? "light" : "dark");
+
+  themeToggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextTheme = document.body.classList.contains("light-theme")
+        ? "dark"
+        : "light";
+      applyTheme(nextTheme);
+      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    });
+  });
+
+  // Update these URLs whenever you want to change hero carousel images.
+  const heroCarouselImages = [
+    "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&w=1800&q=80",
+    "https://images.unsplash.com/photo-1616594039964-3c7f9a9f7f0b?auto=format&fit=crop&w=1800&q=80",
+    "https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1800&q=80",
+    "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=80"
+  ];
+
+  const initHeroCarousel = () => {
+    const heroCarousel = document.querySelector("#hero-carousel");
+    if (!heroCarousel || heroCarouselImages.length === 0) return;
+
+    heroCarouselImages.forEach((imageSrc, index) => {
+      const img = document.createElement("img");
+      img.className = `hero-slide${index === 0 ? " active" : ""}`;
+      img.src = imageSrc;
+      img.alt = "Premium tile showcase";
+      img.loading = index === 0 ? "eager" : "lazy";
+      heroCarousel.appendChild(img);
+    });
+
+    const slides = heroCarousel.querySelectorAll(".hero-slide");
+    if (slides.length < 2) return;
+
+    let activeSlideIndex = 0;
+    setInterval(() => {
+      slides[activeSlideIndex].classList.remove("active");
+      activeSlideIndex = (activeSlideIndex + 1) % slides.length;
+      slides[activeSlideIndex].classList.add("active");
+    }, 3500);
+  };
+
+  initHeroCarousel();
+
   const header = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
@@ -49,6 +112,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const productCardImages = document.querySelectorAll(".product-card img");
+  if (productCardImages.length > 0) {
+    const lightbox = document.createElement("div");
+    lightbox.className = "image-lightbox";
+    lightbox.setAttribute("aria-hidden", "true");
+
+    const lightboxImg = document.createElement("img");
+    lightboxImg.className = "lightbox-image";
+    lightboxImg.alt = "";
+
+    const closeBtn = document.createElement("button");
+    closeBtn.className = "lightbox-close";
+    closeBtn.type = "button";
+    closeBtn.setAttribute("aria-label", "Close image preview");
+    closeBtn.textContent = "×";
+
+    lightbox.append(lightboxImg, closeBtn);
+    document.body.appendChild(lightbox);
+
+    const closeLightbox = () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("lightbox-open");
+    };
+
+    productCardImages.forEach((img) => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.currentSrc || img.src;
+        lightboxImg.alt = img.alt || "Tile image";
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+      });
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("open")) {
+        closeLightbox();
+      }
+    });
+  }
+
   const enquiryForm = document.querySelector("#enquiry-form");
   if (enquiryForm) {
     enquiryForm.addEventListener("submit", (event) => {
@@ -68,6 +180,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const revealElements = document.querySelectorAll(
     ".reveal, .section-title, .section-subtitle, .product-card, .highlight-item, .testimonial, .stat, .card, .contact-card, .form-wrap, .map-wrap"
   );
+
+  const expandableCards = document.querySelectorAll(".expandable-card");
+  if (expandableCards.length > 0) {
+    const collapseAllCards = () => {
+      expandableCards.forEach((card) => {
+        card.classList.remove("is-expanded");
+        card.setAttribute("aria-expanded", "false");
+      });
+    };
+
+    expandableCards.forEach((card) => {
+      card.addEventListener("click", (event) => {
+        if (event.target.closest("a, button")) return;
+
+        const isOpen = card.classList.contains("is-expanded");
+        collapseAllCards();
+        if (!isOpen) {
+          card.classList.add("is-expanded");
+          card.setAttribute("aria-expanded", "true");
+        }
+      });
+
+      card.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        card.click();
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest(".expandable-card")) {
+        collapseAllCards();
+      }
+    });
+  }
 
   if ("IntersectionObserver" in window && revealElements.length > 0) {
     const observer = new IntersectionObserver(

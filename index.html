@@ -23,7 +23,15 @@
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a href="index.html" class="logo">Dream Home Enterprises</a>
+        <a href="index.html" class="logo" aria-label="Dream Home Enterprises home">
+          <img
+            src="images/logo.png"
+            alt="Dream Home Enterprises logo"
+            class="logo-image"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+          />
+          <span class="logo-fallback">Dream Home Enterprises</span>
+        </a>
         <button class="menu-toggle" aria-label="Open navigation">☰</button>
         <nav class="nav-links">
           <a class="active" href="index.html">Home</a>
@@ -31,17 +39,21 @@
           <a href="bathware.html">Bathware</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+            Light Mode
+          </button>
         </nav>
       </div>
     </header>
 
     <main>
       <section class="hero">
+        <div class="hero-carousel" id="hero-carousel" aria-hidden="true"></div>
         <div class="hero-orb hero-orb-one"></div>
         <div class="hero-orb hero-orb-two"></div>
-        <div class="container reveal">
+        <div class="container hero-content reveal">
           <span class="eyebrow">Dream Home Enterprises</span>
-          <h1>Elevate Every Space</h1>
+          <h1>Elevate Your Space</h1>
           <p>
             Discover premium tiles and elegant bathware at Dream Home
             Enterprises, your trusted showroom in Jammalamadugu, Andhra Pradesh.
@@ -70,7 +82,7 @@
             Explore curated finishes, textures, and timeless designs.
           </p>
           <div class="feature-grid">
-            <article class="card">
+            <article class="card expandable-card" tabindex="0" aria-expanded="false">
               <img
                 src="images/tiles/tile-01.jpg"
                 alt="Premium tiles display"
@@ -79,14 +91,21 @@
               />
               <div class="card-content">
                 <h3>Tiles</h3>
-                <p class="muted">
+                <p class="muted card-summary">
                   Floor, wall, outdoor, and designer tile options in multiple
                   formats and finishes.
                 </p>
+                <div class="card-details">
+                  <p class="muted">
+                    Discover premium vitrified, ceramic, and designer collections
+                    with modern textures, larger formats, and durable finishes for
+                    every room.
+                  </p>
+                </div>
                 <a class="btn" href="tiles.html">View Tiles</a>
               </div>
             </article>
-            <article class="card">
+            <article class="card expandable-card" tabindex="0" aria-expanded="false">
               <img
                 src="images/bathware/bath-01.jpg"
                 alt="Luxury bathware setup"
@@ -95,10 +114,17 @@
               />
               <div class="card-content">
                 <h3>Bathware</h3>
-                <p class="muted">
+                <p class="muted card-summary">
                   Premium basins, faucets, sanitary ware, and accessories for
                   stylish bathrooms.
                 </p>
+                <div class="card-details">
+                  <p class="muted">
+                    Explore elegant bath fittings, statement basins, and curated
+                    accessories that combine comfort, water efficiency, and
+                    premium aesthetics.
+                  </p>
+                </div>
                 <a class="btn" href="bathware.html">View Bathware</a>
               </div>
             </article>

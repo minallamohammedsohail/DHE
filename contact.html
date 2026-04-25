@@ -19,7 +19,15 @@
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a href="index.html" class="logo">Dream Home</a>
+        <a href="index.html" class="logo" aria-label="Dream Home Enterprises home">
+          <img
+            src="images/logo.png"
+            alt="Dream Home Enterprises logo"
+            class="logo-image"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+          />
+          <span class="logo-fallback">Dream Home Enterprises</span>
+        </a>
         <button class="menu-toggle" aria-label="Open navigation">☰</button>
         <nav class="nav-links">
           <a href="index.html">Home</a>
@@ -27,6 +35,9 @@
           <a href="bathware.html">Bathware</a>
           <a href="about.html">About</a>
           <a class="active" href="contact.html">Contact</a>
+          <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+            Light Mode
+          </button>
         </nav>
       </div>
     </header>
