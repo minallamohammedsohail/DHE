@@ -30,10 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Update these URLs whenever you want to change hero carousel images.
   const heroCarouselImages = [
-    "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&w=1800&q=80",
-    "https://images.unsplash.com/photo-1616594039964-3c7f9a9f7f0b?auto=format&fit=crop&w=1800&q=80",
-    "https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1800&q=80",
-    "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=80"
+    "/Carousel/antique_ciana.png",
+    "/Carousel/cascade.png",
+    "/Carousel/colonial_black.png",
+    "/Carousel/markino_black.png",
+    "/Carousel/plaster_grey.png"
   ];
 
   const initHeroCarousel = () => {
@@ -83,10 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.toggle("open");
     });
   }
-
-  document
-    .querySelectorAll(".product-card .btn")
-    .forEach((button) => button.remove());
 
   const filterBars = document.querySelectorAll(".filter-bar");
   filterBars.forEach((bar) => {
