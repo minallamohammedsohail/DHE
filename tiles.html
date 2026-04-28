@@ -38,9 +38,12 @@ HOW TO ADD A NEW PRODUCT (TILES)
             src="logo.png"
             alt="Dream Home Enterprises logo"
             class="logo-image"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+            onerror="this.style.display='none'; this.nextElementSibling.querySelector('.logo-fallback').style.display='block';"
           />
-          <span class="logo-fallback">Dream Home Enterprises</span>
+          <span class="logo-meta">
+            <span class="logo-fallback">Dream Home Enterprises</span>
+            <span class="logo-tagline">Tiles and Bathware</span>
+          </span>
         </a>
         <button class="menu-toggle" aria-label="Open navigation">☰</button>
         <nav class="nav-links">
@@ -51,6 +54,7 @@ HOW TO ADD A NEW PRODUCT (TILES)
           <a href="mockups.html">Mockups</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <button class="search-toggle" type="button" aria-label="Search products">Search</button>
           <button class="theme-toggle" type="button" aria-label="Switch to light mode">
             Light Mode
           </button>
@@ -268,7 +272,7 @@ HOW TO ADD A NEW PRODUCT (TILES)
     <footer class="site-footer">
       <div class="container footer-grid">
         <strong>Dream Home Enterprises</strong>
-        <span>Jammalamadugu, Andhra Pradesh, India</span>
+        <span>M.P.D.O Office Road, Jammalamadugu, Kadapa District, 516434, Andhra Pradesh, India.</span>
         <a href="https://maps.app.goo.gl/wJz6Hptb7gxwZo6w9" target="_blank"
           >View on Map</a
         >

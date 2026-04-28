@@ -28,9 +28,12 @@
             src="logo.png"
             alt="Dream Home Enterprises logo"
             class="logo-image"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+            onerror="this.style.display='none'; this.nextElementSibling.querySelector('.logo-fallback').style.display='block';"
           />
-          <span class="logo-fallback">Dream Home Enterprises</span>
+          <span class="logo-meta">
+            <span class="logo-fallback">Dream Home Enterprises</span>
+            <span class="logo-tagline">Tiles and Bathware</span>
+          </span>
         </a>
         <button class="menu-toggle" aria-label="Open navigation">☰</button>
         <nav class="nav-links">
@@ -41,6 +44,7 @@
           <a href="mockups.html">Mockups</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <button class="search-toggle" type="button" aria-label="Search products">Search</button>
           <button class="theme-toggle" type="button" aria-label="Switch to light mode">
             Light Mode
           </button>
@@ -53,8 +57,10 @@
         <div class="hero-carousel" id="hero-carousel" aria-hidden="true"></div>
         <div class="hero-orb hero-orb-one"></div>
         <div class="hero-orb hero-orb-two"></div>
-        <div class="container hero-content reveal">
-          <span class="eyebrow">Dream Home Enterprises</span>
+      </section>
+
+      <section class="section section-tight">
+        <div class="container hero-copy reveal">
           <h1>Elevate Your Space</h1>
           <p>
             Discover premium tiles and elegant bathware at Dream Home
@@ -109,7 +115,7 @@
                     every room.
                   </p>
                 </div>
-                <a class="btn" href="terracota.html">View Terracota</a>
+                <a class="btn" href="tiles.html">View Tiles</a>
               </div>
             </article>
 
@@ -139,49 +145,47 @@
 
             <article class="card expandable-card" tabindex="0" aria-expanded="false">
               <img
-                src="/Carousel/cascade.png"
-                alt="Premium tiles display"
+                src="/Carousel/antique_ciana.png"
+                alt="Terracota tile display"
                 class="card-image"
                 loading="lazy"
               />
               <div class="card-content">
-                <h3>Terracotta Tiles</h3>
+                <h3>Terracota</h3>
                 <p class="muted card-summary">
-                  Floor, wall, outdoor, and designer tile options in multiple
-                  formats and finishes.
+                  Rustic terracota-inspired finishes with earthy tones and
+                  handcrafted textures for timeless spaces.
                 </p>
                 <div class="card-details">
                   <p class="muted">
-                    Discover premium vitrified, ceramic, and designer collections
-                    with modern textures, larger formats, and durable finishes for
-                    every room.
+                    Explore warm natural looks ideal for courtyards, feature
+                    walls, patios, and traditional-modern interiors.
                   </p>
                 </div>
-                <a class="btn" href="mockups.html">View Mockups</a>
+                <a class="btn" href="terracota.html">View Terracota</a>
               </div>
             </article>
 
             <article class="card expandable-card" tabindex="0" aria-expanded="false">
               <img
-                src="/Carousel/cascade.png"
-                alt="Premium tiles display"
+                src="/Carousel/plaster_grey.png"
+                alt="Interior mockup design preview"
                 class="card-image"
                 loading="lazy"
               />
               <div class="card-content">
                 <h3>Mockup Designs</h3>
                 <p class="muted card-summary">
-                  Floor, wall, outdoor, and designer tile options in multiple
-                  formats and finishes.
+                  Visual layout previews that help you imagine tile placement in
+                  real rooms before final selection.
                 </p>
                 <div class="card-details">
                   <p class="muted">
-                    Discover premium vitrified, ceramic, and designer collections
-                    with modern textures, larger formats, and durable finishes for
-                    every room.
+                    Browse curated scene mockups for living spaces, bathrooms,
+                    kitchens, and exterior concepts in a simple vertical format.
                   </p>
                 </div>
-                <a class="btn" href="tiles.html">View Tiles</a>
+                <a class="btn" href="mockups.html">View Mockups</a>
               </div>
             </article>
           </div>
@@ -272,8 +276,8 @@
               <div class="contact-card">
                 <h3>Dream Home Enterprises</h3>
                 <p>
-                  M.P.D.O Office Road, Jammalamadugu,<br />
-                  Andhra Pradesh, India
+                  M.P.D.O Office Road, Jammalamadugu, Kadapa District, 516434<br />
+                  Andhra Pradesh, India.
                 </p>
                 <p><strong>Phone:</strong> <a href="tel:+917036338999">+91 70363 38999</a></p>
                 <p>
@@ -303,7 +307,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <strong>Dream Home Enterprises</strong>
-        <span>Jammalamadugu, Andhra Pradesh, India</span>
+        <span>M.P.D.O Office Road, Jammalamadugu, Kadapa District, 516434, Andhra Pradesh, India.</span>
         <a href="https://maps.app.goo.gl/wJz6Hptb7gxwZo6w9" target="_blank"
           >View on Map</a
         >

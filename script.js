@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
+  const searchToggleButtons = document.querySelectorAll(".search-toggle");
 
   const handleHeaderShadow = () => {
     if (!header) return;
@@ -82,6 +83,222 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("open");
+    });
+  }
+
+  const searchCatalog = [
+    {
+      title: "Tiles Collection",
+      subtitle: "Floor, wall, vitrified, ceramic, designer, and outdoor tiles",
+      keywords: "tiles floor wall vitrified ceramic designer outdoor collection 360",
+      url: "tiles.html"
+    },
+    {
+      title: "Bathware Collection",
+      subtitle: "Basins, faucets, sanitary ware, showers, and accessories",
+      keywords: "bathware basin basins faucet faucets shower sanitary accessories bathroom",
+      url: "bathware.html"
+    },
+    {
+      title: "Terracota Collection",
+      subtitle: "Earthy terracota tile finishes and natural textures",
+      keywords: "terracota terracotta clay earthy rustic tiles designs",
+      url: "terracota.html"
+    },
+    {
+      title: "Mockup Designs",
+      subtitle: "Vertical mockup previews for rooms and design inspiration",
+      keywords: "mockup mockups room preview design visual layout",
+      url: "mockups.html"
+    },
+    {
+      title: "Calacatta Marble Effect",
+      subtitle: "Floor tile in the tiles collection",
+      keywords: "calacatta marble floor tile glossy 600x600",
+      url: "tiles.html"
+    },
+    {
+      title: "Soft Stone Beige",
+      subtitle: "Wall tile in the tiles collection",
+      keywords: "soft stone beige wall tile satin 300x600",
+      url: "tiles.html"
+    },
+    {
+      title: "Rustic Paver Grey",
+      subtitle: "Outdoor tile in the tiles collection",
+      keywords: "rustic paver grey outdoor anti-skid",
+      url: "tiles.html"
+    },
+    {
+      title: "Geometric Luxe Pattern",
+      subtitle: "Designer tile in the tiles collection",
+      keywords: "geometric luxe designer tile matt 600x1200",
+      url: "tiles.html"
+    },
+    {
+      title: "Ivory Terra Slab",
+      subtitle: "Vitrified tile in the tiles collection",
+      keywords: "ivory terra slab vitrified polished 800x800",
+      url: "tiles.html"
+    },
+    {
+      title: "Classic Pearl White",
+      subtitle: "Ceramic tile in the tiles collection",
+      keywords: "classic pearl white ceramic gloss 300x300",
+      url: "tiles.html"
+    },
+    {
+      title: "Oval Counter Basin",
+      subtitle: "Wash basin in the bathware collection",
+      keywords: "oval counter basin wash basin gloss white",
+      url: "bathware.html"
+    },
+    {
+      title: "Freestanding Serenity Tub",
+      subtitle: "Bathtub in the bathware collection",
+      keywords: "freestanding serenity tub bathtub acrylic white",
+      url: "bathware.html"
+    },
+    {
+      title: "Rain Shower Head",
+      subtitle: "Shower fitting in the bathware collection",
+      keywords: "rain shower head chrome bathware",
+      url: "bathware.html"
+    },
+    {
+      title: "Tall Mixer Tap",
+      subtitle: "Faucet in the bathware collection",
+      keywords: "tall mixer tap brushed gold faucet",
+      url: "bathware.html"
+    },
+    {
+      title: "Wall Hung WC Set",
+      subtitle: "Sanitary ware in the bathware collection",
+      keywords: "wall hung wc sanitary ware toilet compact",
+      url: "bathware.html"
+    },
+    {
+      title: "Towel Rack Premium",
+      subtitle: "Accessory in the bathware collection",
+      keywords: "towel rack premium accessory matte black",
+      url: "bathware.html"
+    }
+  ];
+
+  for (let i = 1; i <= 20; i += 1) {
+    searchCatalog.push({
+      title: `Terracota Design ${String(i).padStart(2, "0")}`,
+      subtitle: "Terracota tile design in the collection",
+      keywords: `terracota terracotta design ${i} rustic earthy tile`,
+      url: "terracota.html"
+    });
+  }
+
+  for (let i = 1; i <= 8; i += 1) {
+    searchCatalog.push({
+      title: `Mockup Design ${String(i).padStart(2, "0")}`,
+      subtitle: "Mockup preview in the design gallery",
+      keywords: `mockup design ${i} room preview layout`,
+      url: "mockups.html"
+    });
+  }
+
+  if (searchToggleButtons.length > 0) {
+    const searchModal = document.createElement("div");
+    searchModal.className = "search-modal";
+    searchModal.setAttribute("aria-hidden", "true");
+
+    const searchDialog = document.createElement("div");
+    searchDialog.className = "search-dialog";
+
+    const searchHeader = document.createElement("div");
+    searchHeader.className = "search-header";
+
+    const searchInput = document.createElement("input");
+    searchInput.className = "search-input";
+    searchInput.type = "search";
+    searchInput.placeholder = "Search tiles, bathware, terracota, mockups...";
+    searchInput.setAttribute("aria-label", "Search products");
+
+    const searchClose = document.createElement("button");
+    searchClose.className = "search-close";
+    searchClose.type = "button";
+    searchClose.textContent = "Close";
+
+    const searchResults = document.createElement("div");
+    searchResults.className = "search-results";
+
+    searchHeader.append(searchInput, searchClose);
+    searchDialog.append(searchHeader, searchResults);
+    searchModal.appendChild(searchDialog);
+    document.body.appendChild(searchModal);
+
+    const renderSearchResults = (query = "") => {
+      const normalizedQuery = query.trim().toLowerCase();
+      const matches = normalizedQuery
+        ? searchCatalog.filter((item) => {
+            const haystack = `${item.title} ${item.subtitle} ${item.keywords}`.toLowerCase();
+            return haystack.includes(normalizedQuery);
+          })
+        : searchCatalog.slice(0, 8);
+
+      searchResults.innerHTML = "";
+
+      if (matches.length === 0) {
+        const emptyState = document.createElement("div");
+        emptyState.className = "search-empty";
+        emptyState.textContent = "No matching products found.";
+        searchResults.appendChild(emptyState);
+        return;
+      }
+
+      matches.slice(0, 12).forEach((item) => {
+        const result = document.createElement("a");
+        result.className = "search-result";
+        result.href = item.url;
+        result.innerHTML = `<strong>${item.title}</strong><span>${item.subtitle}</span>`;
+        searchResults.appendChild(result);
+      });
+    };
+
+    const openSearch = () => {
+      searchModal.classList.add("open");
+      searchModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("lightbox-open");
+      renderSearchResults(searchInput.value);
+      window.setTimeout(() => searchInput.focus(), 30);
+    };
+
+    const closeSearch = () => {
+      searchModal.classList.remove("open");
+      searchModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("lightbox-open");
+    };
+
+    searchToggleButtons.forEach((button) => {
+      button.addEventListener("click", openSearch);
+    });
+
+    searchInput.addEventListener("input", () => {
+      renderSearchResults(searchInput.value);
+    });
+
+    searchClose.addEventListener("click", closeSearch);
+    searchModal.addEventListener("click", (event) => {
+      if (event.target === searchModal) {
+        closeSearch();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        openSearch();
+      }
+
+      if (event.key === "Escape" && searchModal.classList.contains("open")) {
+        closeSearch();
+      }
     });
   }
 
