@@ -1,40 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const themeToggleButtons = document.querySelectorAll(".theme-toggle");
-  const THEME_STORAGE_KEY = "dreamhome-theme";
-
-  const applyTheme = (theme) => {
-    const useLight = theme === "light";
-    document.body.classList.toggle("light-theme", useLight);
-
-    themeToggleButtons.forEach((button) => {
-      button.textContent = useLight ? "Dark Mode" : "Light Mode";
-      button.setAttribute(
-        "aria-label",
-        useLight ? "Switch to dark mode" : "Switch to light mode"
-      );
-    });
-  };
-
-  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-  applyTheme(savedTheme === "light" ? "light" : "dark");
-
-  themeToggleButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const nextTheme = document.body.classList.contains("light-theme")
-        ? "dark"
-        : "light";
-      applyTheme(nextTheme);
-      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
-    });
-  });
-
   // Update these URLs whenever you want to change hero carousel images.
   const heroCarouselImages = [
     "/Carousel/antique_ciana.png",
     "/Carousel/cascade.png",
     "/Carousel/colonial_black.png",
     "/Carousel/markino_black.png",
-    "/Carousel/plaster_grey.png"
+    "/Carousel/milos muse.png",
+    "/Carousel/alfeido beige.png",
+    "/Carousel/4d art wood.png"
   ];
 
   const initHeroCarousel = () => {
@@ -86,103 +59,151 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const searchCatalog = [
+  let searchCatalog = [
     {
       title: "Tiles Collection",
       subtitle: "Floor, wall, vitrified, ceramic, designer, and outdoor tiles",
       keywords: "tiles floor wall vitrified ceramic designer outdoor collection 360",
-      url: "tiles.html"
+      url: "tiles.html",
+      type: "Tiles",
+      thumbSrc: "images/tiles/tile-01.jpg"
     },
     {
       title: "Bathware Collection",
       subtitle: "Basins, faucets, sanitary ware, showers, and accessories",
       keywords: "bathware basin basins faucet faucets shower sanitary accessories bathroom",
-      url: "bathware.html"
+      url: "bathware.html",
+      type: "Bathware",
+      thumbSrc: "images/bathware/bath-01.jpg"
     },
     {
       title: "Terracota Collection",
       subtitle: "Earthy terracota tile finishes and natural textures",
       keywords: "terracota terracotta clay earthy rustic tiles designs",
-      url: "terracota.html"
+      url: "terracota.html",
+      type: "Terracota",
+      thumbSrc: "/Carousel/antique_ciana.png"
     },
     {
       title: "Mockup Designs",
       subtitle: "Vertical mockup previews for rooms and design inspiration",
       keywords: "mockup mockups room preview design visual layout",
-      url: "mockups.html"
+      url: "mockups.html",
+      type: "Mockups",
+      thumbSrc: "/Carousel/cascade.png"
     },
     {
       title: "Calacatta Marble Effect",
       subtitle: "Floor tile in the tiles collection",
       keywords: "calacatta marble floor tile glossy 600x600",
-      url: "tiles.html"
+      url: "tiles.html",
+      type: "Floor Tiles",
+      thumbSrc: "images/tiles/tile-01.jpg"
     },
     {
       title: "Soft Stone Beige",
       subtitle: "Wall tile in the tiles collection",
       keywords: "soft stone beige wall tile satin 300x600",
-      url: "tiles.html"
+      url: "tiles.html",
+      type: "Wall Tiles",
+      thumbSrc: "images/tiles/tile-02.jpg"
     },
     {
       title: "Rustic Paver Grey",
       subtitle: "Outdoor tile in the tiles collection",
       keywords: "rustic paver grey outdoor anti-skid",
-      url: "tiles.html"
+      url: "tiles.html",
+      type: "Outdoor",
+      thumbSrc: "images/tiles/tile-03.jpg"
     },
     {
       title: "Geometric Luxe Pattern",
       subtitle: "Designer tile in the tiles collection",
       keywords: "geometric luxe designer tile matt 600x1200",
-      url: "tiles.html"
+      url: "tiles.html",
+      type: "Designer",
+      thumbSrc: "images/tiles/tile-04.jpg"
     },
     {
       title: "Ivory Terra Slab",
       subtitle: "Vitrified tile in the tiles collection",
       keywords: "ivory terra slab vitrified polished 800x800",
-      url: "tiles.html"
+      url: "tiles.html",
+      type: "Vitrified",
+      thumbSrc: "images/tiles/tile-05.jpg"
     },
     {
       title: "Classic Pearl White",
       subtitle: "Ceramic tile in the tiles collection",
       keywords: "classic pearl white ceramic gloss 300x300",
-      url: "tiles.html"
+      url: "tiles.html",
+      type: "Ceramic",
+      thumbSrc: "images/tiles/tile-06.jpg"
     },
     {
       title: "Oval Counter Basin",
       subtitle: "Wash basin in the bathware collection",
       keywords: "oval counter basin wash basin gloss white",
-      url: "bathware.html"
+      url: "bathware.html",
+      type: "Wash Basins",
+      thumbSrc: "images/bathware/bath-01.jpg"
     },
     {
       title: "Freestanding Serenity Tub",
       subtitle: "Bathtub in the bathware collection",
       keywords: "freestanding serenity tub bathtub acrylic white",
-      url: "bathware.html"
+      url: "bathware.html",
+      type: "Bathtubs",
+      thumbSrc: "images/bathware/bath-02.jpg"
     },
     {
       title: "Rain Shower Head",
       subtitle: "Shower fitting in the bathware collection",
       keywords: "rain shower head chrome bathware",
-      url: "bathware.html"
+      url: "bathware.html",
+      type: "Showers",
+      thumbSrc: "images/bathware/bath-03.jpg"
     },
     {
       title: "Tall Mixer Tap",
       subtitle: "Faucet in the bathware collection",
       keywords: "tall mixer tap brushed gold faucet",
-      url: "bathware.html"
+      url: "bathware.html",
+      type: "Faucets & Mixers",
+      thumbSrc: "images/bathware/bath-04.jpg"
     },
     {
       title: "Wall Hung WC Set",
       subtitle: "Sanitary ware in the bathware collection",
       keywords: "wall hung wc sanitary ware toilet compact",
-      url: "bathware.html"
+      url: "bathware.html",
+      type: "Sanitary Ware",
+      thumbSrc: "images/bathware/bath-05.jpg"
     },
     {
       title: "Towel Rack Premium",
       subtitle: "Accessory in the bathware collection",
       keywords: "towel rack premium accessory matte black",
-      url: "bathware.html"
+      url: "bathware.html",
+      type: "Accessories",
+      thumbSrc: "images/bathware/bath-06.jpg"
     }
+  ];
+
+  const terracotaThumbs = [
+    "/Carousel/antique_ciana.png",
+    "/Carousel/cascade.png",
+    "/Carousel/colonial_black.png",
+    "/Carousel/markino_black.png",
+    "/Carousel/plaster_grey.png"
+  ];
+
+  const mockupThumbs = [
+    "/Carousel/antique_ciana.png",
+    "/Carousel/cascade.png",
+    "/Carousel/colonial_black.png",
+    "/Carousel/markino_black.png",
+    "/Carousel/plaster_grey.png"
   ];
 
   for (let i = 1; i <= 20; i += 1) {
@@ -190,7 +211,9 @@ document.addEventListener("DOMContentLoaded", () => {
       title: `Terracota Design ${String(i).padStart(2, "0")}`,
       subtitle: "Terracota tile design in the collection",
       keywords: `terracota terracotta design ${i} rustic earthy tile`,
-      url: "terracota.html"
+      url: "terracota.html",
+      type: "Terracota",
+      thumbSrc: terracotaThumbs[(i - 1) % terracotaThumbs.length]
     });
   }
 
@@ -199,8 +222,57 @@ document.addEventListener("DOMContentLoaded", () => {
       title: `Mockup Design ${String(i).padStart(2, "0")}`,
       subtitle: "Mockup preview in the design gallery",
       keywords: `mockup design ${i} room preview layout`,
-      url: "mockups.html"
+      url: "mockups.html",
+      type: "Mockups",
+      thumbSrc: mockupThumbs[(i - 1) % mockupThumbs.length]
     });
+  }
+
+  // Build a page-specific search catalog from real product cards.
+  // This enables thumbnail + size/type details in the live search modal.
+  const productCardsForSearch = document.querySelectorAll(".product-card");
+  if (productCardsForSearch.length > 0) {
+    const buildProductSearchCatalog = (cards) => {
+      const pathname = window.location.pathname || "";
+      const catalog = [];
+
+      cards.forEach((card, idx) => {
+        const id =
+          card.id || `product-card-${pathname.replace(/[^a-z0-9]/gi, "-")}-${idx}`;
+        card.id = id;
+
+        const title =
+          card.querySelector("h3")?.textContent?.trim() ||
+          card.querySelector(".badge")?.textContent?.trim() ||
+          "Product";
+
+        const subtitle = card.querySelector("p.muted")?.textContent?.trim() || "";
+
+        const type =
+          card.querySelector(".badge")?.textContent?.trim() ||
+          card.getAttribute("data-category") ||
+          "";
+
+        const thumbImg = card.querySelector("img");
+        const thumbSrc = thumbImg ? thumbImg.currentSrc || thumbImg.src : "";
+
+        const keywords = `${title} ${subtitle} ${type} ${card.getAttribute("data-category") || ""}`.trim();
+
+        catalog.push({
+          title,
+          subtitle,
+          type,
+          keywords,
+          thumbSrc,
+          url: `${pathname}#${id}`,
+          cardId: id
+        });
+      });
+
+      return catalog;
+    };
+
+    searchCatalog = [...buildProductSearchCatalog(productCardsForSearch), ...searchCatalog];
   }
 
   if (searchToggleButtons.length > 0) {
@@ -237,7 +309,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const normalizedQuery = query.trim().toLowerCase();
       const matches = normalizedQuery
         ? searchCatalog.filter((item) => {
-            const haystack = `${item.title} ${item.subtitle} ${item.keywords}`.toLowerCase();
+            const haystack = `${item.title || ""} ${item.subtitle || ""} ${item.type || ""} ${
+              item.keywords || ""
+            }`.toLowerCase();
             return haystack.includes(normalizedQuery);
           })
         : searchCatalog.slice(0, 8);
@@ -256,7 +330,50 @@ document.addEventListener("DOMContentLoaded", () => {
         const result = document.createElement("a");
         result.className = "search-result";
         result.href = item.url;
-        result.innerHTML = `<strong>${item.title}</strong><span>${item.subtitle}</span>`;
+
+        const thumbSrc = item.thumbSrc || "logo.png";
+        const thumb = document.createElement("img");
+        thumb.className = "search-thumb";
+        thumb.src = thumbSrc;
+        thumb.alt = item.title || "Product";
+        result.appendChild(thumb);
+
+        const meta = document.createElement("div");
+        meta.className = "search-meta";
+
+        const strong = document.createElement("strong");
+        strong.textContent = item.title || "Product";
+        meta.appendChild(strong);
+
+        if (item.subtitle) {
+          const size = document.createElement("span");
+          size.className = "search-size";
+          size.textContent = item.subtitle;
+          meta.appendChild(size);
+        }
+
+        if (item.type) {
+          const typePill = document.createElement("span");
+          typePill.className = "search-type";
+          typePill.textContent = item.type;
+          meta.appendChild(typePill);
+        }
+
+        result.appendChild(meta);
+
+        // If we can locate the target card on the same page, smooth-scroll to it.
+        if (item.cardId) {
+          result.addEventListener("click", (event) => {
+            const target = document.getElementById(item.cardId);
+            if (!target) return;
+
+            event.preventDefault();
+            closeSearch();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            window.location.hash = item.cardId;
+          });
+        }
+
         searchResults.appendChild(result);
       });
     };
@@ -325,6 +442,41 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // If a product card contains multiple images, keep the first as the main image
+  // and move the rest into a compact thumbnail strip.
+  const setupMultiImageProductCards = () => {
+    const cards = document.querySelectorAll(".product-card");
+
+    cards.forEach((card) => {
+      if (card.dataset.multiImageProcessed === "true") return;
+
+      // Collect only direct <img> children before the .card-body.
+      const directImages = Array.from(card.children).filter(
+        (el) => el.tagName === "IMG"
+      );
+      if (directImages.length <= 1) return;
+
+      const body = card.querySelector(".card-body");
+      if (!body) return;
+
+      const mainImg = directImages[0];
+      mainImg.classList.add("product-main-image");
+
+      const thumbStrip = document.createElement("div");
+      thumbStrip.className = "product-thumb-strip";
+
+      directImages.slice(1).forEach((imgEl) => {
+        imgEl.classList.add("product-thumb");
+        thumbStrip.appendChild(imgEl);
+      });
+
+      card.insertBefore(thumbStrip, body);
+      card.dataset.multiImageProcessed = "true";
+    });
+  };
+
+  setupMultiImageProductCards();
 
   const productCardImages = document.querySelectorAll(".product-card img");
   if (productCardImages.length > 0) {

@@ -4,9 +4,11 @@
 HOW TO ADD A NEW PRODUCT (TILES)
 1) Copy one complete <div class="product-card"> ... </div> block.
 2) Paste it below the comment: ADD NEW PRODUCTS HERE.
-3) Change ONLY these 4 values:
+3) Change ONLY these 4 values (and optionally add more images):
    - data-category="floor-tiles" (or wall-tiles/outdoor/designer/vitrified/ceramic)
    - image src="images/tiles/tile-21.jpg"
+   - You can add multiple images by duplicating the <img ... /> line(s) inside the same
+     .product-card (keep them before the <div class="card-body">).
    - product name inside <h3> ... </h3>
    - size/finish text inside <p class="muted"> ... </p>
 4) Save this file. Done.
@@ -30,7 +32,7 @@ HOW TO ADD A NEW PRODUCT (TILES)
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="light-theme">
     <header class="site-header">
       <div class="container nav-wrap">
         <a href="index.html" class="logo" aria-label="Dream Home Enterprises home">
@@ -42,7 +44,7 @@ HOW TO ADD A NEW PRODUCT (TILES)
           />
           <span class="logo-meta">
             <span class="logo-fallback">Dream Home Enterprises</span>
-            <span class="logo-tagline">Tiles and Bathware</span>
+            <span class="logo-tagline">Tiles & Bathware</span>
           </span>
         </a>
         <button class="menu-toggle" aria-label="Open navigation">☰</button>
@@ -55,9 +57,16 @@ HOW TO ADD A NEW PRODUCT (TILES)
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
           <button class="search-toggle" type="button" aria-label="Search products">Search</button>
-          <button class="theme-toggle" type="button" aria-label="Switch to light mode">
-            Light Mode
-          </button>
+          <div class="nav-contact-stack">
+            <a class="nav-contact-item" href="https://wa.me/919490696528" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+              <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 8.02 0C3.63 0 .06 3.57.06 7.958a7.9 7.9 0 0 0 1.025 3.9L0 16l4.265-1.117a7.95 7.95 0 0 0 3.754.95h.003c4.388 0 7.958-3.57 7.958-7.958a7.9 7.9 0 0 0-2.379-5.549M8.022 14.49a6.58 6.58 0 0 1-3.357-.92l-.24-.142-2.53.662.676-2.468-.156-.253a6.58 6.58 0 0 1-1.021-3.518c0-3.64 2.963-6.603 6.605-6.603a6.56 6.56 0 0 1 4.676 1.938 6.56 6.56 0 0 1 1.934 4.673c-.001 3.642-2.964 6.606-6.587 6.606m3.621-4.945c-.198-.099-1.173-.579-1.355-.645s-.314-.099-.446.1-.512.645-.628.777-.231.149-.429.05-.838-.309-1.596-.986a5.95 5.95 0 0 1-1.102-1.37c-.116-.199-.012-.306.087-.405.09-.09.198-.231.297-.347.099-.116.132-.198.198-.33s.033-.248-.017-.347-.446-1.074-.611-1.473c-.161-.387-.325-.334-.446-.34l-.38-.007a.73.73 0 0 0-.529.248c-.182.198-.694.678-.694 1.653s.711 1.918.81 2.05.1.149 1.396 2.133c.308.529.703.999 1.17 1.39.534.38 1.044.608 1.418.778.596.257 1.139.221 1.568.134.478-.071 1.173-.479 1.338-.942s.165-.86.116-.942-.182-.133-.38-.232"/></svg></span>
+              <span>+91 94906 06528</span>
+            </a>
+            <a class="nav-contact-item" href="https://instagram.com/dreamhomeenterprises_tiles" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram profile">
+              <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 3.4A4.6 4.6 0 1 0 8 12.6 4.6 4.6 0 0 0 8 3.4m0 7.6A3 3 0 1 1 8 5a3 3 0 0 1 0 6"/><path d="M12.66.8H3.34A2.54 2.54 0 0 0 .8 3.34v9.32a2.54 2.54 0 0 0 2.54 2.54h9.32a2.54 2.54 0 0 0 2.54-2.54V3.34A2.54 2.54 0 0 0 12.66.8m.94 11.86c0 .519-.421.94-.94.94H3.34a.94.94 0 0 1-.94-.94V3.34c0-.519.421-.94.94-.94h9.32c.519 0 .94.421.94.94z"/><path d="M12.2 4.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0"/></svg></span>
+              <span>@dreamhomeenterprises_tiles</span>
+            </a>
+          </div>
         </nav>
       </div>
     </header>
@@ -78,20 +87,21 @@ HOW TO ADD A NEW PRODUCT (TILES)
           <button class="filter-btn" data-filter="floor-tiles">Floor Tiles</button>
           <button class="filter-btn" data-filter="wall-tiles">Wall Tiles</button>
           <button class="filter-btn" data-filter="outdoor">Outdoor</button>
-          <button class="filter-btn" data-filter="designer">Designer</button>
+          <button class="filter-btn" data-filter="parking-tiles">Parking Tiles</button>
           <button class="filter-btn" data-filter="vitrified">Vitrified</button>
           <button class="filter-btn" data-filter="ceramic">Ceramic</button>
         </div>
 
         <section id="tiles-grid" class="products-grid">
           <!-- ADD NEW PRODUCTS HERE — duplicate a card block below -->
-          <div class="product-card" data-category="floor-tiles">
-            <img src="images/tiles/tile-01.jpg" alt="Tile 01" loading="lazy" />
+          <div class="product-card" data-category="parking-tiles">
+            <img src="/Carousel/4d art wood.png" alt="Tile 01" loading="lazy" />
             <div class="card-body">
-              <span class="badge">Floor Tiles</span>
+              <span class="badge">Parking Tiles</span>
               <h3>Calacatta Marble Effect - 600x600mm</h3>
               <p class="muted">Size: 600x600mm | Finish: Glossy</p>
-              <a class="btn" href="https://www.kajariaceramics.com/" target="_blank" rel="noopener">View 360°</a>
+              <a class="btn" href="https://static.varmora.com/360/600x1200mm/9mm/palm/							
+              " target="_blank" rel="noopener">View 360°</a>
             </div>
           </div>
           <div class="product-card" data-category="wall-tiles">
