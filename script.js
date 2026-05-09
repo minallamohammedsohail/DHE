@@ -443,8 +443,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // If a product card contains multiple images, keep the first as the main image
-  // and move the rest into a compact thumbnail strip.
+  // If a product card contains multiple images, transform it into
+  // a small image carousel with previous/next arrow controls.
   const setupMultiImageProductCards = () => {
     const cards = document.querySelectorAll(".product-card");
 
@@ -460,18 +460,70 @@ document.addEventListener("DOMContentLoaded", () => {
       const body = card.querySelector(".card-body");
       if (!body) return;
 
+      const images = directImages.map((imgEl) => ({
+        src: imgEl.currentSrc || imgEl.src,
+        alt: imgEl.alt || "Product image"
+      }));
+
       const mainImg = directImages[0];
       mainImg.classList.add("product-main-image");
 
-      const thumbStrip = document.createElement("div");
-      thumbStrip.className = "product-thumb-strip";
+      // Keep one image element and swap its source while navigating.
+      directImages.slice(1).forEach((imgEl) => imgEl.remove());
 
-      directImages.slice(1).forEach((imgEl) => {
-        imgEl.classList.add("product-thumb");
-        thumbStrip.appendChild(imgEl);
+      const mediaWrap = document.createElement("div");
+      mediaWrap.className = "product-media-wrap";
+      card.insertBefore(mediaWrap, mainImg);
+      mediaWrap.appendChild(mainImg);
+
+      const createNavButton = (direction) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `product-image-nav product-image-nav-${direction}`;
+        button.setAttribute(
+          "aria-label",
+          direction === "prev" ? "Show previous product image" : "Show next product image"
+        );
+        button.textContent = direction === "prev" ? "‹" : "›";
+        return button;
+      };
+
+      const prevButton = createNavButton("prev");
+      const nextButton = createNavButton("next");
+      const counter = document.createElement("span");
+      counter.className = "product-image-counter";
+      counter.setAttribute("aria-live", "polite");
+
+      mediaWrap.append(prevButton, nextButton, counter);
+
+      let currentIndex = 0;
+      const updateCarouselImage = () => {
+        const imageData = images[currentIndex];
+        mainImg.src = imageData.src;
+        mainImg.alt = imageData.alt;
+        counter.textContent = `${currentIndex + 1}/${images.length}`;
+        card.dataset.galleryIndex = String(currentIndex);
+      };
+
+      const showImage = (step) => {
+        currentIndex = (currentIndex + step + images.length) % images.length;
+        updateCarouselImage();
+      };
+
+      prevButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        showImage(-1);
       });
 
-      card.insertBefore(thumbStrip, body);
+      nextButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        showImage(1);
+      });
+
+      card.dataset.galleryImages = JSON.stringify(images);
+      updateCarouselImage();
       card.dataset.multiImageProcessed = "true";
     });
   };
@@ -494,8 +546,81 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.setAttribute("aria-label", "Close image preview");
     closeBtn.textContent = "×";
 
-    lightbox.append(lightboxImg, closeBtn);
+    const lightboxPrev = document.createElement("button");
+    lightboxPrev.className = "lightbox-nav lightbox-nav-prev";
+    lightboxPrev.type = "button";
+    lightboxPrev.setAttribute("aria-label", "Show previous image");
+    lightboxPrev.textContent = "‹";
+
+    const lightboxNext = document.createElement("button");
+    lightboxNext.className = "lightbox-nav lightbox-nav-next";
+    lightboxNext.type = "button";
+    lightboxNext.setAttribute("aria-label", "Show next image");
+    lightboxNext.textContent = "›";
+
+    const lightboxCounter = document.createElement("span");
+    lightboxCounter.className = "lightbox-counter";
+    lightboxCounter.setAttribute("aria-live", "polite");
+
+    lightbox.append(lightboxImg, closeBtn, lightboxPrev, lightboxNext, lightboxCounter);
     document.body.appendChild(lightbox);
+
+    let activeLightboxImages = [];
+    let activeLightboxIndex = 0;
+
+    const updateLightboxImage = () => {
+      if (activeLightboxImages.length === 0) return;
+      const imageData = activeLightboxImages[activeLightboxIndex];
+      lightboxImg.src = imageData.src;
+      lightboxImg.alt = imageData.alt || "Product image";
+      lightboxCounter.textContent = `${activeLightboxIndex + 1}/${activeLightboxImages.length}`;
+
+      const hasMultiple = activeLightboxImages.length > 1;
+      lightboxPrev.classList.toggle("hidden", !hasMultiple);
+      lightboxNext.classList.toggle("hidden", !hasMultiple);
+      lightboxCounter.classList.toggle("hidden", !hasMultiple);
+    };
+
+    const showLightboxImage = (step) => {
+      if (activeLightboxImages.length <= 1) return;
+      activeLightboxIndex =
+        (activeLightboxIndex + step + activeLightboxImages.length) % activeLightboxImages.length;
+      updateLightboxImage();
+    };
+
+    const openLightboxForImage = (img) => {
+      const card = img.closest(".product-card");
+      let cardGallery = [];
+
+      if (card?.dataset.galleryImages) {
+        try {
+          cardGallery = JSON.parse(card.dataset.galleryImages);
+        } catch (error) {
+          cardGallery = [];
+        }
+      }
+
+      if (cardGallery.length === 0) {
+        cardGallery = [
+          {
+            src: img.currentSrc || img.src,
+            alt: img.alt || "Product image"
+          }
+        ];
+      }
+
+      activeLightboxImages = cardGallery;
+      const cardIndex = Number(card?.dataset.galleryIndex);
+      const matchedIndex = cardGallery.findIndex((item) => item.src === (img.currentSrc || img.src));
+      activeLightboxIndex = Number.isFinite(cardIndex)
+        ? Math.max(0, Math.min(cardIndex, cardGallery.length - 1))
+        : Math.max(0, matchedIndex);
+
+      updateLightboxImage();
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("lightbox-open");
+    };
 
     const closeLightbox = () => {
       lightbox.classList.remove("open");
@@ -505,12 +630,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     productCardImages.forEach((img) => {
       img.addEventListener("click", () => {
-        lightboxImg.src = img.currentSrc || img.src;
-        lightboxImg.alt = img.alt || "Tile image";
-        lightbox.classList.add("open");
-        lightbox.setAttribute("aria-hidden", "false");
-        document.body.classList.add("lightbox-open");
+        openLightboxForImage(img);
       });
+    });
+
+    lightboxPrev.addEventListener("click", (event) => {
+      event.stopPropagation();
+      showLightboxImage(-1);
+    });
+
+    lightboxNext.addEventListener("click", (event) => {
+      event.stopPropagation();
+      showLightboxImage(1);
     });
 
     closeBtn.addEventListener("click", closeLightbox);
@@ -523,6 +654,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && lightbox.classList.contains("open")) {
         closeLightbox();
+      } else if (event.key === "ArrowLeft" && lightbox.classList.contains("open")) {
+        showLightboxImage(-1);
+      } else if (event.key === "ArrowRight" && lightbox.classList.contains("open")) {
+        showLightboxImage(1);
       }
     });
   }

@@ -564,40 +564,79 @@ a {
 .product-card img.product-main-image {
   height: 210px;
   object-fit: cover;
+  width: 100%;
 }
 
-.product-thumb-strip {
-  display: flex;
-  gap: 0.45rem;
-  align-items: center;
-  padding: 0.55rem 0.75rem;
-  border-top: 1px solid rgba(116, 165, 223, 0.12);
-  background: rgba(10, 18, 30, 0.34);
+.product-media-wrap {
+  position: relative;
 }
 
-.product-card img.product-thumb {
-  /* Thumbnails for multi-image cards */
-  height: 58px;
-  width: 92px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid rgba(126, 183, 243, 0.28);
-  background: #cccccc;
-  flex-shrink: 0;
+.product-image-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(159, 200, 255, 0.42);
+  border-radius: 50%;
+  background: rgba(8, 15, 26, 0.75);
+  color: #eaf4ff;
+  display: grid;
+  place-items: center;
+  font-size: 1.45rem;
+  line-height: 1;
+  padding-bottom: 0.12rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+  z-index: 2;
 }
 
-.products-grid.vertical-mockups .product-thumb-strip {
-  /* Slightly larger thumbnails for the mockup layout */
-  padding: 0.6rem 0.75rem;
+.product-image-nav:hover {
+  background: rgba(15, 28, 45, 0.92);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.product-image-nav-prev {
+  left: 0.55rem;
+}
+
+.product-image-nav-next {
+  right: 0.55rem;
+}
+
+.product-image-counter {
+  position: absolute;
+  right: 0.55rem;
+  bottom: 0.55rem;
+  padding: 0.17rem 0.48rem;
+  border-radius: 999px;
+  background: rgba(8, 15, 26, 0.72);
+  border: 1px solid rgba(159, 200, 255, 0.34);
+  color: #e8f2ff;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  pointer-events: none;
+}
+
+.product-card[data-multi-image-processed="true"]:hover .product-image-nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product-card[data-multi-image-processed="true"]:focus-within .product-image-nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product-card[data-multi-image-processed="true"] .product-main-image {
+  cursor: zoom-in;
 }
 
 .products-grid.vertical-mockups .product-card img.product-main-image {
   height: 360px;
-}
-
-.products-grid.vertical-mockups .product-card img.product-thumb {
-  height: 76px;
-  width: 118px;
 }
 
 .product-card {
@@ -848,6 +887,56 @@ a {
 .lightbox-close:hover {
   transform: scale(1.08);
   background: rgba(19, 33, 52, 0.95);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(176, 211, 248, 0.45);
+  border-radius: 50%;
+  background: rgba(10, 18, 30, 0.78);
+  color: #e9f3ff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.lightbox-nav:hover {
+  transform: translateY(-50%) scale(1.06);
+  background: rgba(19, 33, 52, 0.95);
+}
+
+.lightbox-nav-prev {
+  left: 24px;
+}
+
+.lightbox-nav-next {
+  right: 24px;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(176, 211, 248, 0.45);
+  background: rgba(10, 18, 30, 0.78);
+  color: #e9f3ff;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.lightbox-nav.hidden,
+.lightbox-counter.hidden {
+  display: none;
 }
 
 body.lightbox-open {
@@ -1191,6 +1280,11 @@ body.light-theme .search-result {
     grid-template-columns: 1fr;
   }
 
+  .product-card[data-multi-image-processed="true"] .product-image-nav {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .hero {
     min-height: 60vh;
   }
@@ -1206,6 +1300,20 @@ body.light-theme .search-result {
   .site-header .container.nav-wrap {
     padding-left: 6.5rem;
     padding-right: 0.5rem;
+  }
+
+  .lightbox-nav {
+    width: 42px;
+    height: 42px;
+    font-size: 1.7rem;
+  }
+
+  .lightbox-nav-prev {
+    left: 12px;
+  }
+
+  .lightbox-nav-next {
+    right: 12px;
   }
 }
 
