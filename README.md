@@ -44,6 +44,16 @@ Static, multi-page showroom website built with plain HTML, CSS, and Vanilla Java
 1. Import this folder/repository into [Vercel](https://vercel.com/new).
 2. Click deploy with default settings.
 
+## SEO & Domain
+
+Live site: **https://dreamhomeenterprises.in**
+
+- `seo-config.js` — `siteUrl` and business data (update here if domain changes)
+- `seo.js` — meta tags, Open Graph, JSON-LD
+- `sitemap.xml` / `robots.txt` — submit sitemap in [Google Search Console](https://search.google.com/search-console)
+
+Point your domain DNS to your host (Netlify/Vercel/GitHub Pages), enable HTTPS, and redirect `www` → non-www (or the reverse) so only one canonical URL is used.
+
 ## Notes
 
 - No backend is needed.

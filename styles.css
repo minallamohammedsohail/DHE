@@ -512,6 +512,50 @@ a {
   color: #f0cb73;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: center;
+}
+
+.local-seo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1.2rem;
+}
+
+.local-seo-intro {
+  max-width: 52rem;
+  margin: 0.5rem auto 0;
+  text-align: center;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 48rem;
+  margin: 1rem auto 0;
+}
+
+.faq-item {
+  border: 1px solid rgba(176, 130, 67, 0.28);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 252, 247, 0.7);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #4d3519;
+}
+
+.faq-item p {
+  margin: 0.65rem 0 0;
+}
+
 .catalog-header {
   padding-top: 2.4rem;
 }
