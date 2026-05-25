@@ -39,10 +39,18 @@ Static, multi-page showroom website built with plain HTML, CSS, and Vanilla Java
 1. Drag and drop this folder into [Netlify Drop](https://app.netlify.com/drop).
 2. Netlify instantly gives a live URL.
 
-### Option 3: Vercel
+### Option 3: Vercel (recommended — dreamhomeenterprises.in)
 
-1. Import this folder/repository into [Vercel](https://vercel.com/new).
-2. Click deploy with default settings.
+1. Go to [vercel.com/new](https://vercel.com/new) and **Import** the GitHub repo `minallamohammedsohail/DHE`.
+2. Framework Preset: **Other** (static site, no build step).
+3. Root Directory: `.` — leave Build Command empty, Output Directory `.`
+4. Deploy. Every `git push` to `main` redeploys automatically.
+5. **Custom domain:** Project → **Settings** → **Domains** → add `dreamhomeenterprises.in` and `www.dreamhomeenterprises.in`.
+6. At your domain registrar, add DNS records Vercel shows (usually):
+   - `A` record `@` → `76.76.21.21`
+   - `CNAME` record `www` → `cname.vercel-dns.com`
+7. In Vercel, set **Redirect** `www` → `dreamhomeenterprises.in` (matches site canonical URLs).
+8. Submit `https://dreamhomeenterprises.in/sitemap.xml` in Google Search Console.
 
 ## SEO & Domain
 
@@ -52,7 +60,7 @@ Live site: **https://dreamhomeenterprises.in**
 - `seo.js` — meta tags, Open Graph, JSON-LD
 - `sitemap.xml` / `robots.txt` — submit sitemap in [Google Search Console](https://search.google.com/search-console)
 
-Point your domain DNS to your host (Netlify/Vercel/GitHub Pages), enable HTTPS, and redirect `www` → non-www (or the reverse) so only one canonical URL is used.
+This project is set up for **Vercel**. Point `dreamhomeenterprises.in` DNS to Vercel and redirect `www` → apex so canonical URLs stay consistent.
 
 ## Notes
 
