@@ -1,6 +1,7 @@
 window.DHE_SEO_CONFIG = {
   siteUrl: "https://dreamhomeenterprises.in/",
   businessName: "Dream Home Enterprises",
+  siteName: "Dream Home Enterprises",
   description:
     "Premium tile store and bathware showroom in Jammalamadugu, Kadapa District, Andhra Pradesh. Serving Jammalamadugu, Proddatur, and nearby areas with floor tiles, wall tiles, vitrified tiles, and sanitary ware.",
   streetAddress: "M.P.D.O Office Road",

@@ -59,7 +59,7 @@
 
   [
     ["og:type", page.ogType || "website"],
-    ["og:site_name", cfg.businessName],
+    ["og:site_name", cfg.siteName || cfg.businessName],
     ["og:title", title],
     ["og:description", description],
     ["og:url", canonical],
@@ -135,7 +135,8 @@
       "@type": "WebSite",
       "@id": origin + "/#website",
       url: origin + "/",
-      name: cfg.businessName,
+      name: cfg.siteName || cfg.businessName,
+      alternateName: [cfg.businessName, "Dream Home Tiles & Bathware"],
       description: cfg.description,
       publisher: { "@id": origin + "/#business" },
       inLanguage: "en-IN",
