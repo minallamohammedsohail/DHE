@@ -15,7 +15,7 @@ window.DHE_SEO_CONFIG = {
   email: "dreamhomeenterprises.jmd@gmail.com",
   instagram: "https://instagram.com/dreamhome.tiles",
   mapsUrl: "https://maps.app.goo.gl/wJz6Hptb7gxwZo6w9",
-  logoPath: "logo.png",
+  logoPath: "logow.png",
   priceRange: "₹₹",
   areaServed: [
     "Jammalamadugu",

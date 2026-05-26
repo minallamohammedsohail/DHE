@@ -89,6 +89,12 @@
       description: cfg.description,
       url: origin + "/",
       image: image,
+      logo: {
+        "@type": "ImageObject",
+        url: origin + "/logow.png",
+        width: 798,
+        height: 792,
+      },
       telephone: cfg.phone,
       email: cfg.email,
       priceRange: cfg.priceRange,
