@@ -373,6 +373,20 @@
       ],
       "link360": "https://static.varmora.com/600x1200mm/9mm/360-bornite-bianco/",
       "enquireLink": ""
+    },
+    {
+      "name": "Test",
+      "category": "floor-tiles",
+      "categoryLabel": "Floor Tiles",
+      "size": "600x1200mm",
+      "finish": "Test",
+      "description": "",
+      "link360": "",
+      "enquireLink": "",
+      "images": [
+        "/uploads/products/1781788394700-Screenshot_2026-06-18_182221.png"
+      ],
+      "id": "tiles-1781788398175"
     }
   ],
   "bathware": [
