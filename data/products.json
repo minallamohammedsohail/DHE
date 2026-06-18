@@ -1,0 +1,590 @@
+{
+  "tiles": [
+    {
+      "id": "tiles-1",
+      "name": "Gem Decor Palm A - 600x1200mm",
+      "category": "parking-tiles",
+      "categoryLabel": "Parking Tiles",
+      "size": "",
+      "finish": "Green White",
+      "description": "Finish: Green White",
+      "images": [
+        "/Tiles/Palm A-1.png",
+        "/Tiles/Palm A-2.png"
+      ],
+      "link360": "https://static.varmora.com/360/600x1200mm/9mm/palm/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-2",
+      "name": "Marvel Plus - Infinity Pastel Brown (Polished) - 600x1200mm",
+      "category": "wall-tiles",
+      "categoryLabel": "Wall Tiles",
+      "size": "",
+      "finish": "White",
+      "description": "Finish: White",
+      "images": [
+        "/Tiles/infinity pastel brown-1.png",
+        "/Tiles/infinity pastel brown-2.png"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-infinity-pastel-brown/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-3",
+      "name": "Rocker plus Ash Ford whisky - 600x1200mm",
+      "category": "outdoor",
+      "categoryLabel": "Outdoor",
+      "size": "",
+      "finish": "Rocker",
+      "description": "Finish: Rocker",
+      "images": [
+        "/Tiles/ASHFORDWHISKY1.jpg",
+        "/Tiles/ASHFORDWHISKY2.jpg"
+      ],
+      "link360": "http://static.varmora.com/600x1200mm/9mm/360-ash-ford-whisky",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-4",
+      "name": "Marvel Plus Infinity Calcutta Paonazzo - 600x1200mm",
+      "category": "designer",
+      "categoryLabel": "Designer",
+      "size": "",
+      "finish": "Polished",
+      "description": "Finish: Polished",
+      "images": [
+        "/Tiles/INFINITYCALCUTTAPAONAZZO1.jpg",
+        "/Tiles/INFINITYCALCUTTAPAONAZZO2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-infinity-calcutta-paonazzo/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-5",
+      "name": "Rocker Plus Ethnic White - 600x1200mm",
+      "category": "vitrified",
+      "categoryLabel": "Vitrified",
+      "size": "",
+      "finish": "Polished",
+      "description": "Finish: Polished",
+      "images": [
+        "/Tiles/ETHNICWHITE1.jpg",
+        "/Tiles/ETHNICWHITE2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-ethnic-white/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-6",
+      "name": "Nexa Marmor White - 600x1200mm",
+      "category": "ceramic",
+      "categoryLabel": "Ceramic",
+      "size": "",
+      "finish": "Matt",
+      "description": "Finish: Matt",
+      "images": [
+        "/Tiles/MARMORWHITE1.jpg",
+        "/Tiles/MARMORWHITE2.jpg"
+      ],
+      "link360": "https://static.varmora.com/360/600x1200mm/9mm/marmor-white/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-7",
+      "name": "MERANTI WOOD COPPER - 600x600mm",
+      "category": "floor-tiles",
+      "categoryLabel": "Floor Tiles",
+      "size": "",
+      "finish": "Matt",
+      "description": "Finish: Matt",
+      "images": [
+        "/Tiles/MERANTIWOODCOPPER1.jpg",
+        "/Tiles/MERANTIWOODCOPPER2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x600mm/9mm/360-meranti-wood-copper/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-8",
+      "name": "TAVETTI BEIGE - 600x1200mm",
+      "category": "wall-tiles",
+      "categoryLabel": "Wall Tiles",
+      "size": "",
+      "finish": "Rocker",
+      "description": "Finish: Rocker",
+      "images": [
+        "/Tiles/TAVETTIBEIGE1.jpg",
+        "/Tiles/TAVETTIBEIGE2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-tavetti-beige/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-9",
+      "name": "TAVETTI BIANCO - 600x1200mm",
+      "category": "outdoor",
+      "categoryLabel": "Outdoor",
+      "size": "",
+      "finish": "Rocker",
+      "description": "Finish: Rocker",
+      "images": [
+        "/Tiles/TAVETTIBIANCO1.jpg",
+        "/Tiles/TAVETTIBIANCO2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-tavetti-bianco/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-10",
+      "name": "INFINITY OLIVIA BRASS POLISHED - 600x1200mm",
+      "category": "designer",
+      "categoryLabel": "Designer",
+      "size": "",
+      "finish": "Polished",
+      "description": "Finish: Polished",
+      "images": [
+        "/Tiles/INFINITYOLIVIABRASSPOLISHED0.jpg",
+        "/Tiles/INFINITYOLIVIABRASSPOLISHED1.jpg"
+      ],
+      "link360": "https://static.varmora.com/360/600x1200mm/9mm/infinity-olivia-brass-polished/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-11",
+      "name": "INFINITY OLIVIA BRASS MATT - 600x1200mm",
+      "category": "vitrified",
+      "categoryLabel": "Vitrified",
+      "size": "",
+      "finish": "Matt",
+      "description": "Finish: Matt",
+      "images": [
+        "/Tiles/INFINITYOLIVIABRASSMATT1.jpg"
+      ],
+      "link360": "https://static.varmora.com/360/600x1200mm/9mm/infinity-olivia-brass-matt/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-12",
+      "name": "GEM ALFREDO BEIGE - 600x1200mm",
+      "category": "ceramic",
+      "categoryLabel": "Ceramic",
+      "size": "",
+      "finish": "Grey",
+      "description": "Finish: Grey",
+      "images": [
+        "/Tiles/ALFREDOBEIGE1.jpg",
+        "/Tiles/ALFREDOBEIGE2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-alfredo-beige/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-13",
+      "name": "GEM ALFREDO GREY - 600x1200mm",
+      "category": "floor-tiles",
+      "categoryLabel": "Floor Tiles",
+      "size": "",
+      "finish": "Ivory",
+      "description": "Finish: Ivory",
+      "images": [
+        "/Tiles/ALFREDOGREY1.jpg",
+        "/Tiles/ALFREDOGREY2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-alfredo-grey/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-14",
+      "name": "MARVEL PLUS TULIP BROWN - 600x1200mm",
+      "category": "wall-tiles",
+      "categoryLabel": "Wall Tiles",
+      "size": "",
+      "finish": "Polished",
+      "description": "Finish: Polished",
+      "images": [
+        "/Tiles/TULIPBROWN1.jpg",
+        "/Tiles/TULIPBROWN2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-tulip-brown/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-15",
+      "name": "MARVEL PLUS INFINITY BLICK WHITE - 600x1200mm",
+      "category": "outdoor",
+      "categoryLabel": "Outdoor",
+      "size": "",
+      "finish": "Polished",
+      "description": "Finish: Polished",
+      "images": [
+        "/Tiles/INFINITYBLICKWHITE1.jpg",
+        "/Tiles/INFINITYBLICKWHITE2.jpg"
+      ],
+      "link360": "https://static.varmora.com/360/600x1200mm/9mm/infinity-blick-white/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-16",
+      "name": "HIGH GLOSS FLUID AQUA - 600x1200mm",
+      "category": "designer",
+      "categoryLabel": "Designer",
+      "size": "",
+      "finish": "High Gloss",
+      "description": "Finish: High Gloss",
+      "images": [
+        "/Tiles/FLUIDAQUA1.jpg",
+        "/Tiles/FLUIDAQUA2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-fluid-aqua/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-17",
+      "name": "MAGNUM CLOBBER - 600x1200mm",
+      "category": "vitrified",
+      "categoryLabel": "Vitrified",
+      "size": "",
+      "finish": "Polished",
+      "description": "Finish: Polished",
+      "images": [
+        "/Tiles/CLOBBER1.jpg",
+        "/Tiles/CLOBBER2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-clobber/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-18",
+      "name": "GEM IMOLA BROWN - 600x1200mm",
+      "category": "ceramic",
+      "categoryLabel": "Ceramic",
+      "size": "",
+      "finish": "Gem",
+      "description": "Finish: Gem",
+      "images": [
+        "/Tiles/IMOLABROWN1.jpg",
+        "/Tiles/IMOLABROWN2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-imola-brown/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-19",
+      "name": "GEM IMOLA GREY - 600x1200mm",
+      "category": "floor-tiles",
+      "categoryLabel": "Floor Tiles",
+      "size": "",
+      "finish": "Gem",
+      "description": "Finish: Gem",
+      "images": [
+        "/Tiles/IMOLAGREY1.jpg",
+        "/Tiles/IMOLAGREY2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-imola-grey/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-20",
+      "name": "MARVEL TULIP IVORY - 600x1200mm",
+      "category": "wall-tiles",
+      "categoryLabel": "Wall Tiles",
+      "size": "",
+      "finish": "Polished",
+      "description": "Finish: Polished",
+      "images": [
+        "/Tiles/TULIPIVORY1.jpg",
+        "/Tiles/TULIPIVORY2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-tulip-ivory/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-21",
+      "name": "GLOSSY KELLY CECELIA - 600x1200mm",
+      "category": "wall-tiles",
+      "categoryLabel": "Wall Tiles",
+      "size": "",
+      "finish": "Ivory",
+      "description": "Finish: Ivory",
+      "images": [
+        "/Tiles/KELLYCECILIA1.jpg",
+        "/Tiles/KELLYCECILIA2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-kelly-cecilia/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-22",
+      "name": "MAGNUM ARMANI WHITE - 600x1200mm",
+      "category": "wall-tiles",
+      "categoryLabel": "Wall Tiles",
+      "size": "",
+      "finish": "Polished",
+      "description": "Finish: Polished",
+      "images": [
+        "/Tiles/ARMANIWHITE1.jpg",
+        "/Tiles/ARMANIWHITE2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-armani-white/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-23",
+      "name": "NEXA FINO PEARL - 600x1200mm",
+      "category": "wall-tiles",
+      "categoryLabel": "Wall Tiles",
+      "size": "",
+      "finish": "Polished",
+      "description": "Finish: Polished",
+      "images": [
+        "/Tiles/FINOPEARL1.jpg",
+        "/Tiles/FINOPEARL2.jpg"
+      ],
+      "link360": "https://static.varmora.com/360/600x1200mm/9mm/fino-pearl/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-24",
+      "name": "NEXA ALBI BROWN - 600x1200mm",
+      "category": "wall-tiles",
+      "categoryLabel": "Wall Tiles",
+      "size": "",
+      "finish": "Matt",
+      "description": "Finish: Matt",
+      "images": [
+        "/Tiles/ALBIBROWN1.jpg",
+        "/Tiles/ALBIBROWN2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-albi-brown/",
+      "enquireLink": ""
+    },
+    {
+      "id": "tiles-25",
+      "name": "NEXA BORNITE BIANCO - 600x1200mm",
+      "category": "wall-tiles",
+      "categoryLabel": "Wall Tiles",
+      "size": "",
+      "finish": "Matt",
+      "description": "Finish: Matt",
+      "images": [
+        "/Tiles/BORNITEBIANCO1.jpg",
+        "/Tiles/BORNITEBIANCO2.jpg"
+      ],
+      "link360": "https://static.varmora.com/600x1200mm/9mm/360-bornite-bianco/",
+      "enquireLink": ""
+    }
+  ],
+  "bathware": [
+    {
+      "id": "bathware-1",
+      "name": "Oval Counter Basin - 560mm",
+      "category": "wash-basins",
+      "categoryLabel": "Wash Basins",
+      "size": "",
+      "finish": "Gloss White",
+      "description": "Size: 560mm | Finish: Gloss White",
+      "images": [
+        "images/bathware/bath-01.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "https://wa.me/91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-2",
+      "name": "Freestanding Serenity Tub - 1700mm",
+      "category": "bathtubs",
+      "categoryLabel": "Bathtubs",
+      "size": "",
+      "finish": "Acrylic White",
+      "description": "Size: 1700mm | Finish: Acrylic White",
+      "images": [
+        "images/bathware/bath-02.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "tel:+91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-3",
+      "name": "Rain Shower Head - 300mm",
+      "category": "showers",
+      "categoryLabel": "Showers",
+      "size": "",
+      "finish": "Chrome",
+      "description": "Size: 300mm | Finish: Chrome",
+      "images": [
+        "images/bathware/bath-03.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "https://wa.me/91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-4",
+      "name": "Tall Mixer Tap - Brushed Gold",
+      "category": "faucets-mixers",
+      "categoryLabel": "Faucets & Mixers",
+      "size": "",
+      "finish": "Brushed Gold",
+      "description": "Model: DHM-104 | Finish: Brushed Gold",
+      "images": [
+        "images/bathware/bath-04.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "tel:+91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-5",
+      "name": "Wall Hung WC Set - Compact",
+      "category": "sanitary-ware",
+      "categoryLabel": "Sanitary Ware",
+      "size": "",
+      "finish": "Type: Wall Hung | Seat: Soft Close",
+      "description": "Type: Wall Hung | Seat: Soft Close",
+      "images": [
+        "images/bathware/bath-05.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "https://wa.me/91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-6",
+      "name": "Towel Rack Premium - 600mm",
+      "category": "accessories",
+      "categoryLabel": "Accessories",
+      "size": "",
+      "finish": "Matte Black",
+      "description": "Size: 600mm | Finish: Matte Black",
+      "images": [
+        "images/bathware/bath-06.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "tel:+91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-7",
+      "name": "Rectangular Basin - 600mm",
+      "category": "wash-basins",
+      "categoryLabel": "Wash Basins",
+      "size": "",
+      "finish": "Matt White",
+      "description": "Size: 600mm | Finish: Matt White",
+      "images": [
+        "images/bathware/bath-07.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "https://wa.me/91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-8",
+      "name": "Corner Relax Tub - 1500mm",
+      "category": "bathtubs",
+      "categoryLabel": "Bathtubs",
+      "size": "",
+      "finish": "Acrylic",
+      "description": "Size: 1500mm | Finish: Acrylic",
+      "images": [
+        "images/bathware/bath-08.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "tel:+91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-9",
+      "name": "Hand Shower Kit - 3 Functions",
+      "category": "showers",
+      "categoryLabel": "Showers",
+      "size": "",
+      "finish": "Chrome",
+      "description": "Model: SH-309 | Finish: Chrome",
+      "images": [
+        "images/bathware/bath-09.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "https://wa.me/91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-10",
+      "name": "Wall Mixer Tap - Twin Handle",
+      "category": "faucets-mixers",
+      "categoryLabel": "Faucets & Mixers",
+      "size": "",
+      "finish": "Chrome",
+      "description": "Model: FM-210 | Finish: Chrome",
+      "images": [
+        "images/bathware/bath-10.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "tel:+91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-11",
+      "name": "One Piece Closet - Sleek",
+      "category": "sanitary-ware",
+      "categoryLabel": "Sanitary Ware",
+      "size": "",
+      "finish": "Type: One Piece | Seat: Soft Close",
+      "description": "Type: One Piece | Seat: Soft Close",
+      "images": [
+        "images/bathware/bath-11.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "https://wa.me/91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-12",
+      "name": "Soap Dispenser Set - Wall Mount",
+      "category": "accessories",
+      "categoryLabel": "Accessories",
+      "size": "",
+      "finish": "Satin Steel",
+      "description": "Type: Wall Mount | Finish: Satin Steel",
+      "images": [
+        "images/bathware/bath-12.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "tel:+91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-13",
+      "name": "Table Top Bowl Basin - 420mm",
+      "category": "wash-basins",
+      "categoryLabel": "Wash Basins",
+      "size": "",
+      "finish": "Gloss White",
+      "description": "Size: 420mm | Finish: Gloss White",
+      "images": [
+        "images/bathware/bath-13.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "https://wa.me/91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-14",
+      "name": "Sensor Faucet - Smart Flow",
+      "category": "faucets-mixers",
+      "categoryLabel": "Faucets & Mixers",
+      "size": "",
+      "finish": "Chrome",
+      "description": "Type: Sensor | Finish: Chrome",
+      "images": [
+        "images/bathware/bath-14.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "tel:+91XXXXXXXXXX"
+    },
+    {
+      "id": "bathware-15",
+      "name": "Mirror Cabinet - LED",
+      "category": "accessories",
+      "categoryLabel": "Accessories",
+      "size": "",
+      "finish": "Frosted Glass",
+      "description": "Size: 800mm | Finish: Frosted Glass",
+      "images": [
+        "images/bathware/bath-15.jpg"
+      ],
+      "link360": "",
+      "enquireLink": "https://wa.me/91XXXXXXXXXX"
+    }
+  ]
+}

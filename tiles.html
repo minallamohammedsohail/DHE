@@ -1,19 +1,4 @@
 <!DOCTYPE html>
-<!--
-=========================================================
-HOW TO ADD A NEW PRODUCT (TILES)
-1) Copy one complete <div class="product-card"> ... </div> block.
-2) Paste it below the comment: ADD NEW PRODUCTS HERE.
-3) Change ONLY these 4 values (and optionally add more images):
-   - data-category="floor-tiles" (or wall-tiles/outdoor/designer/vitrified/ceramic)
-   - image src="images/tiles/tile-21.jpg"
-   - You can add multiple images by duplicating the <img ... /> line(s) inside the same
-     .product-card (keep them before the <div class="card-body">).
-   - product name inside <h3> ... </h3>
-   - size/finish text inside <p class="muted"> ... </p>
-4) Save this file. Done.
-=========================================================
--->
 <html lang="en-IN">
   <head>
     <meta charset="UTF-8" />
@@ -21,17 +6,11 @@ HOW TO ADD A NEW PRODUCT (TILES)
     <title>Floor &amp; Wall Tiles in Jammalamadugu | Dream Home Enterprises</title>
     <meta name="description" content="Premium floor, wall &amp; vitrified tiles at Dream Home Enterprises — tile showroom in Jammalamadugu, near Proddatur, Kadapa District. dreamhomeenterprises.in" />
     <link rel="canonical" href="https://dreamhomeenterprises.in/tiles.html" />
-    <!-- To add a new product, duplicate one .product-card block in the grid below. -->
-    <link rel="icon" href="favicon.ico" sizes="48x48" />
-    <link rel="icon" type="image/png" href="favicon-48x48.png" sizes="48x48" />
-    <link rel="icon" type="image/png" href="logow.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" type="image/png" href="fav.png" />
+    <link rel="apple-touch-icon" href="fav.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script id="seo-page-data" type="application/json">
       {"path":"tiles.html","title":"Floor & Wall Tiles in Jammalamadugu | Dream Home Enterprises","description":"Premium floor, wall & vitrified tiles at Dream Home Enterprises — tile showroom in Jammalamadugu, near Proddatur, Kadapa District.","breadcrumb":[{"name":"Home","path":"index.html"},{"name":"Tiles","path":"tiles.html"}]}
@@ -39,16 +18,11 @@ HOW TO ADD A NEW PRODUCT (TILES)
     <script src="seo-config.js"></script>
     <script src="seo.js"></script>
   </head>
-  <body class="light-theme">
+  <body class="light-theme" data-catalog="tiles">
     <header class="site-header">
       <div class="container nav-wrap">
         <a href="index.html" class="logo" aria-label="Dream Home Enterprises home">
-          <img
-            src="logo.png"
-            alt="Dream Home Enterprises logo"
-            class="logo-image"
-            onerror="this.style.display='none'; this.nextElementSibling.querySelector('.logo-fallback').style.display='block';"
-          />
+          <img src="logo.png" alt="Dream Home Enterprises logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.querySelector('.logo-fallback').style.display='block';" />
           <span class="logo-meta">
             <span class="logo-fallback">Dream Home Enterprises</span>
             <span class="logo-tagline">Tiles & Bathware</span>
@@ -96,274 +70,8 @@ HOW TO ADD A NEW PRODUCT (TILES)
           use arrows to browse multiple images when available.
         </p>
 
-        <div class="filter-bar" data-target="#tiles-grid">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="floor-tiles">Floor Tiles</button>
-          <button class="filter-btn" data-filter="wall-tiles">Elevation Tiles</button>
-          <button class="filter-btn" data-filter="outdoor">Flooring Tiles</button>
-          <button class="filter-btn" data-filter="parking-tiles">Parking Tiles</button>
-          <button class="filter-btn" data-filter="vitrified">Vitrified</button>
-          <button class="filter-btn" data-filter="ceramic">Ceramic</button>
-        </div>
-
-        <section id="tiles-grid" class="products-grid">
-          <!-- ADD NEW PRODUCTS HERE — duplicate a card block below -->
-          <div class="product-card" data-category="parking-tiles">
-            <img src="/Tiles/Palm A-1.png" alt="Tile 01" loading="lazy" />
-            <img src="/Tiles/Palm A-2.png" alt="Tile 01" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Parking Tiles</span>
-              <h3>Gem Decor Palm A - 600x1200mm</h3>
-              <p class="muted">Finish: Green White</p>
-              <a class="btn" href="https://static.varmora.com/360/600x1200mm/9mm/palm/							
-              " target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="wall-tiles">
-            <img src="/Tiles/infinity pastel brown-1.png" alt="Tile 02" loading="lazy" />
-            <img src="/Tiles/infinity pastel brown-2.png" alt="Tile 02" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wall Tiles</span>
-              <h3>Marvel Plus - Infinity Pastel Brown (Polished) - 600x1200mm</h3>
-              <p class="muted">Finish: White</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-infinity-pastel-brown/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="outdoor">
-            <img src="/Tiles/ASHFORDWHISKY1.jpg" alt="Tile 03" loading="lazy" />
-            <img src="/Tiles/ASHFORDWHISKY2.jpg" alt="Tile 03" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Outdoor</span>
-              <h3>Rocker plus Ash Ford whisky - 600x1200mm</h3>
-              <p class="muted">Finish: Rocker</p>
-              <a class="btn" href="http://static.varmora.com/600x1200mm/9mm/360-ash-ford-whisky" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="designer">
-            <img src="/Tiles/INFINITYCALCUTTAPAONAZZO1.jpg" alt="Tile 04" loading="lazy" />
-            <img src="/Tiles/INFINITYCALCUTTAPAONAZZO2.jpg" alt="Tile 04" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Designer</span>
-              <h3>Marvel Plus Infinity Calcutta Paonazzo - 600x1200mm</h3>
-              <p class="muted">Finish: Polished</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-infinity-calcutta-paonazzo/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="vitrified">
-            <img src="/Tiles/ETHNICWHITE1.jpg" alt="Tile 05" loading="lazy" />
-            <img src="/Tiles/ETHNICWHITE2.jpg" alt="Tile 05" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Vitrified</span>
-              <h3>Rocker Plus Ethnic White - 600x1200mm</h3>
-              <p class="muted">Finish: Polished</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-ethnic-white/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="ceramic">
-            <img src="/Tiles/MARMORWHITE1.jpg" alt="Tile 06" loading="lazy" />
-            <img src="/Tiles/MARMORWHITE2.jpg" alt="Tile 06" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Ceramic</span>
-              <h3>Nexa Marmor White - 600x1200mm</h3>
-              <p class="muted">Finish: Matt</p>
-              <a class="btn" href="https://static.varmora.com/360/600x1200mm/9mm/marmor-white/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="floor-tiles">
-            <img src="/Tiles/MERANTIWOODCOPPER1.jpg" alt="Tile 07" loading="lazy" />
-            <img src="/Tiles/MERANTIWOODCOPPER2.jpg" alt="Tile 07" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Floor Tiles</span>
-              <h3>MERANTI WOOD COPPER - 600x600mm</h3>
-              <p class="muted">Finish: Matt</p>
-              <a class="btn" href="https://static.varmora.com/600x600mm/9mm/360-meranti-wood-copper/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="wall-tiles">
-            <img src="/Tiles/TAVETTIBEIGE1.jpg" alt="Tile 08" loading="lazy" />
-            <img src="/Tiles/TAVETTIBEIGE2.jpg" alt="Tile 08" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wall Tiles</span>
-              <h3>TAVETTI BEIGE - 600x1200mm</h3>
-              <p class="muted">Finish: Rocker</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-tavetti-beige/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="outdoor">
-            <img src="/Tiles/TAVETTIBIANCO1.jpg" alt="Tile 09" loading="lazy" />
-            <img src="/Tiles/TAVETTIBIANCO2.jpg" alt="Tile 09" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Outdoor</span>
-              <h3>TAVETTI BIANCO - 600x1200mm</h3>
-              <p class="muted">Finish: Rocker</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-tavetti-bianco/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="designer">
-            <img src="/Tiles/INFINITYOLIVIABRASSPOLISHED0.jpg" alt="Tile 10" loading="lazy" />
-            <img src="/Tiles/INFINITYOLIVIABRASSPOLISHED1.jpg" alt="Tile 10" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Designer</span>
-              <h3>INFINITY OLIVIA BRASS POLISHED - 600x1200mm</h3>
-              <p class="muted">Finish: Polished</p>
-              <a class="btn" href="https://static.varmora.com/360/600x1200mm/9mm/infinity-olivia-brass-polished/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="vitrified">
-            <img src="/Tiles/INFINITYOLIVIABRASSMATT1.jpg" alt="Tile 11" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Vitrified</span>
-              <h3>INFINITY OLIVIA BRASS MATT - 600x1200mm</h3>
-              <p class="muted">Finish: Matt</p>
-              <a class="btn" href="https://static.varmora.com/360/600x1200mm/9mm/infinity-olivia-brass-matt/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="ceramic">
-            <img src="/Tiles/ALFREDOBEIGE1.jpg" alt="Tile 12" loading="lazy" />
-            <img src="/Tiles/ALFREDOBEIGE2.jpg" alt="Tile 12" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Ceramic</span>
-              <h3>GEM ALFREDO BEIGE - 600x1200mm</h3>
-              <p class="muted">Finish: Grey</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-alfredo-beige/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="floor-tiles">
-            <img src="/Tiles/ALFREDOGREY1.jpg" alt="Tile 13" loading="lazy" />
-            <img src="/Tiles/ALFREDOGREY2.jpg" alt="Tile 13" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Floor Tiles</span>
-              <h3>GEM ALFREDO GREY - 600x1200mm</h3>
-              <p class="muted">Finish: Ivory</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-alfredo-grey/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="wall-tiles">
-            <img src="/Tiles/TULIPBROWN1.jpg" alt="Tile 14" loading="lazy" />
-            <img src="/Tiles/TULIPBROWN2.jpg" alt="Tile 14" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wall Tiles</span>
-              <h3>MARVEL PLUS TULIP BROWN - 600x1200mm</h3>
-              <p class="muted">Finish: Polished</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-tulip-brown/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="outdoor">
-            <img src="/Tiles/INFINITYBLICKWHITE1.jpg" alt="Tile 15" loading="lazy" />
-            <img src="/Tiles/INFINITYBLICKWHITE2.jpg" alt="Tile 15" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Outdoor</span>
-              <h3>MARVEL PLUS INFINITY BLICK WHITE - 600x1200mm</h3>
-              <p class="muted">Finish: Polished</p>
-              <a class="btn" href="https://static.varmora.com/360/600x1200mm/9mm/infinity-blick-white/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="designer">
-            <img src="/Tiles/FLUIDAQUA1.jpg" alt="Tile 16" loading="lazy" />
-            <img src="/Tiles/FLUIDAQUA2.jpg" alt="Tile 16" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Designer</span>
-              <h3>HIGH GLOSS FLUID AQUA - 600x1200mm</h3>
-              <p class="muted">Finish: High Gloss</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-fluid-aqua/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="vitrified">
-            <img src="/Tiles/CLOBBER1.jpg" alt="Tile 17" loading="lazy" />
-            <img src="/Tiles/CLOBBER2.jpg" alt="Tile 17" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Vitrified</span>
-              <h3>MAGNUM CLOBBER - 600x1200mm</h3>
-              <p class="muted">Finish: Polished</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-clobber/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="ceramic">
-            <img src="/Tiles/IMOLABROWN1.jpg" alt="Tile 18" loading="lazy" />
-            <img src="/Tiles/IMOLABROWN2.jpg" alt="Tile 18" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Ceramic</span>
-              <h3>GEM IMOLA BROWN - 600x1200mm</h3>
-              <p class="muted">Finish: Gem</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-imola-brown/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="floor-tiles">
-            <img src="/Tiles/IMOLAGREY1.jpg" alt="Tile 19" loading="lazy" />
-            <img src="/Tiles/IMOLAGREY2.jpg" alt="Tile 19" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Floor Tiles</span>
-              <h3>GEM IMOLA GREY - 600x1200mm</h3>
-              <p class="muted">Finish: Gem</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-imola-grey/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="wall-tiles">
-            <img src="/Tiles/TULIPIVORY1.jpg" alt="Tile 20" loading="lazy" />
-            <img src="/Tiles/TULIPIVORY2.jpg" alt="Tile 20" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wall Tiles</span>
-              <h3>MARVEL TULIP IVORY - 600x1200mm</h3>
-              <p class="muted">Finish: Polished</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-tulip-ivory/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-
-          <div class="product-card" data-category="wall-tiles">
-            <img src="/Tiles/KELLYCECILIA1.jpg" alt="Tile 20" loading="lazy" />
-            <img src="/Tiles/KELLYCECILIA2.jpg" alt="Tile 20" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wall Tiles</span>
-              <h3>GLOSSY KELLY CECELIA - 600x1200mm</h3>
-              <p class="muted">Finish: Ivory</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-kelly-cecilia/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-
-          <div class="product-card" data-category="wall-tiles">
-            <img src="/Tiles/ARMANIWHITE1.jpg" alt="Tile 20" loading="lazy" />
-            <img src="/Tiles/ARMANIWHITE2.jpg" alt="Tile 20" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wall Tiles</span>
-              <h3>MAGNUM ARMANI WHITE - 600x1200mm</h3>
-              <p class="muted">Finish: Polished</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-armani-white/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-
-          <div class="product-card" data-category="wall-tiles">
-            <img src="/Tiles/FINOPEARL1.jpg" alt="Tile 20" loading="lazy" />
-            <img src="/Tiles/FINOPEARL2.jpg" alt="Tile 20" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wall Tiles</span>
-              <h3>NEXA FINO PEARL - 600x1200mm</h3>
-              <p class="muted">Finish: Polished</p>
-              <a class="btn" href="https://static.varmora.com/360/600x1200mm/9mm/fino-pearl/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-
-          <div class="product-card" data-category="wall-tiles">
-            <img src="/Tiles/ALBIBROWN1.jpg" alt="Tile 20" loading="lazy" />
-            <img src="/Tiles/ALBIBROWN2.jpg" alt="Tile 20" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wall Tiles</span>
-              <h3>NEXA ALBI BROWN - 600x1200mm</h3>
-              <p class="muted">Finish: Matt</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-albi-brown/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-
-          <div class="product-card" data-category="wall-tiles">
-            <img src="/Tiles/BORNITEBIANCO1.jpg" alt="Tile 20" loading="lazy" />
-            <img src="/Tiles/BORNITEBIANCO2.jpg" alt="Tile 20" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wall Tiles</span>
-              <h3>NEXA BORNITE BIANCO - 600x1200mm</h3>
-              <p class="muted">Finish: Matt</p>
-              <a class="btn" href="https://static.varmora.com/600x1200mm/9mm/360-bornite-bianco/" target="_blank" rel="noopener">View 360°</a>
-            </div>
-          </div>
-        </section>
+        <div class="filter-bar" data-catalog-filters="tiles"></div>
+        <section id="tiles-grid" class="products-grid"></section>
       </div>
     </main>
 
@@ -371,9 +79,7 @@ HOW TO ADD A NEW PRODUCT (TILES)
       <div class="container footer-grid">
         <strong>Dream Home Enterprises</strong>
         <span>M.P.D.O Office Road, Jammalamadugu, Kadapa District, 516434, Andhra Pradesh, India.</span>
-        <a href="https://maps.app.goo.gl/wJz6Hptb7gxwZo6w9" target="_blank"
-          >View on Map</a
-        >
+        <a href="https://maps.app.goo.gl/wJz6Hptb7gxwZo6w9" target="_blank">View on Map</a>
         <nav class="footer-links" aria-label="Site pages">
           <a href="index.html">Home</a>
           <a href="bathware.html">Bathware</a>
@@ -384,6 +90,8 @@ HOW TO ADD A NEW PRODUCT (TILES)
       </div>
     </footer>
 
+    <script src="js/product-config.js"></script>
+    <script src="js/product-catalog.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

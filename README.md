@@ -52,6 +52,10 @@ Static, multi-page showroom website built with plain HTML, CSS, and Vanilla Java
 7. In Vercel, set **Redirect** `www` → `dreamhomeenterprises.in` (matches site canonical URLs).
 8. Submit `https://dreamhomeenterprises.in/sitemap.xml` in Google Search Console.
 
+## Product admin (no coding)
+
+Owners manage tiles and bathware at **/admin.html**. See [ADMIN_SETUP.md](ADMIN_SETUP.md) for Vercel env vars (`ADMIN_PASSWORD`, `GITHUB_TOKEN`).
+
 ## SEO & Domain
 
 Live site: **https://dreamhomeenterprises.in**

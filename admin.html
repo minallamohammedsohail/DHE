@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Admin | Dream Home Enterprises</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="fav.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="light-theme admin-page">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo">
+          <span class="logo-meta">
+            <span class="logo-fallback" style="display:block">Dream Home Admin</span>
+            <span class="logo-tagline">Product catalog</span>
+          </span>
+        </a>
+        <nav class="nav-links" style="display:flex">
+          <a href="index.html">View website</a>
+          <a href="tiles.html">Tiles page</a>
+          <a href="bathware.html">Bathware page</a>
+          <button type="button" class="btn btn-secondary" id="admin-logout" hidden>Log out</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section admin-main">
+      <div class="container">
+        <section id="admin-login" class="admin-card">
+          <h1>Sign in to manage products</h1>
+          <p class="muted">Add, edit, or remove tiles and bathware without editing code.</p>
+          <form id="login-form" class="admin-form">
+            <div class="form-row">
+              <label for="admin-password">Admin password</label>
+              <input id="admin-password" type="password" required autocomplete="current-password" />
+            </div>
+            <button class="btn" type="submit">Sign in</button>
+            <p id="login-error" class="admin-error" hidden></p>
+          </form>
+          <p class="muted admin-hint">
+            Password is set in Vercel → Settings → Environment Variables as
+            <code>ADMIN_PASSWORD</code>.
+          </p>
+        </section>
+
+        <section id="admin-dashboard" class="admin-dashboard" hidden>
+          <div class="admin-toolbar">
+            <h1>Product catalog</h1>
+            <div class="admin-toolbar-actions">
+              <select id="catalog-filter" aria-label="Filter by catalog">
+                <option value="all">All catalogs</option>
+                <option value="tiles">Tiles only</option>
+                <option value="bathware">Bathware only</option>
+              </select>
+              <button type="button" class="btn" id="btn-add-product">+ Add product</button>
+            </div>
+          </div>
+
+          <div id="admin-status" class="admin-status muted"></div>
+          <div id="product-list" class="admin-product-list"></div>
+        </section>
+
+        <dialog id="product-dialog" class="admin-dialog">
+          <form id="product-form" class="admin-form admin-form-wide">
+            <h2 id="dialog-title">Add product</h2>
+            <input type="hidden" id="product-id" />
+            <div class="admin-form-grid">
+              <div class="form-row">
+                <label for="product-catalog">Catalog</label>
+                <select id="product-catalog" required>
+                  <option value="tiles">Tiles</option>
+                  <option value="bathware">Bathware</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="product-category">Category</label>
+                <select id="product-category" required></select>
+              </div>
+              <div class="form-row">
+                <label for="product-name">Product name</label>
+                <input id="product-name" type="text" required placeholder="e.g. Marvel Plus Infinity Pastel Brown" />
+              </div>
+              <div class="form-row">
+                <label for="product-size">Size</label>
+                <input id="product-size" type="text" placeholder="e.g. 600x1200mm" />
+              </div>
+              <div class="form-row">
+                <label for="product-finish">Finish</label>
+                <input id="product-finish" type="text" placeholder="e.g. Polished, Matt, Gloss White" />
+              </div>
+              <div class="form-row">
+                <label for="product-description">Extra details (optional)</label>
+                <input id="product-description" type="text" placeholder="Shown if size/finish empty" />
+              </div>
+              <div class="form-row">
+                <label for="product-link360">360° view link (tiles)</label>
+                <input id="product-link360" type="url" placeholder="https://..." />
+              </div>
+              <div class="form-row">
+                <label for="product-enquire">Enquire link (bathware)</label>
+                <input id="product-enquire" type="url" placeholder="tel:+91... or https://wa.me/..." />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Product images</label>
+              <p class="muted admin-field-hint">Upload photos or paste image paths (one per line).</p>
+              <input id="product-images-file" type="file" accept="image/*" multiple />
+              <textarea id="product-images" rows="4" placeholder="/Tiles/example.jpg&#10;/uploads/products/photo.png"></textarea>
+              <div id="image-previews" class="admin-image-previews"></div>
+            </div>
+
+            <div class="admin-dialog-actions">
+              <button type="button" class="btn btn-secondary" id="dialog-cancel">Cancel</button>
+              <button type="submit" class="btn" id="dialog-save">Save product</button>
+            </div>
+            <p id="form-error" class="admin-error" hidden></p>
+          </form>
+        </dialog>
+      </div>
+    </main>
+
+    <script src="js/product-config.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

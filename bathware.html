@@ -1,19 +1,4 @@
 <!DOCTYPE html>
-<!--
-=========================================================
-HOW TO ADD A NEW PRODUCT (BATHWARE)
-1) Copy one complete <div class="product-card"> ... </div> block.
-2) Paste it below the comment: ADD NEW PRODUCTS HERE.
-3) Change ONLY these 4 values (and optionally add more images):
-   - data-category="wash-basins" (or bathtubs/showers/faucets-mixers/sanitary-ware/accessories)
-   - image src="images/bathware/bath-16.jpg"
-   - You can add multiple images by duplicating the <img ... /> line(s) inside the same
-     .product-card (keep them before the <div class="card-body">).
-   - product name inside <h3> ... </h3>
-   - size/finish text inside <p class="muted"> ... </p>
-4) Save this file. Done.
-=========================================================
--->
 <html lang="en-IN">
   <head>
     <meta charset="UTF-8" />
@@ -21,17 +6,11 @@ HOW TO ADD A NEW PRODUCT (BATHWARE)
     <title>Bathware Showroom Jammalamadugu | Dream Home Enterprises</title>
     <meta name="description" content="Bathware, basins &amp; sanitary ware at Dream Home Enterprises, Jammalamadugu — near Proddatur, Kadapa district. dreamhomeenterprises.in" />
     <link rel="canonical" href="https://dreamhomeenterprises.in/bathware.html" />
-    <!-- To add a new product, duplicate one .product-card block in the grid below. -->
-    <link rel="icon" href="favicon.ico" sizes="48x48" />
-    <link rel="icon" type="image/png" href="favicon-48x48.png" sizes="48x48" />
-    <link rel="icon" type="image/png" href="logow.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" type="image/png" href="fav.png" />
+    <link rel="apple-touch-icon" href="fav.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script id="seo-page-data" type="application/json">
       {"path":"bathware.html","title":"Bathware Showroom Jammalamadugu | Dream Home Enterprises","description":"Bathware, basins and sanitary ware at Dream Home Enterprises, Jammalamadugu, Kadapa district.","breadcrumb":[{"name":"Home","path":"index.html"},{"name":"Bathware","path":"bathware.html"}]}
@@ -39,16 +18,11 @@ HOW TO ADD A NEW PRODUCT (BATHWARE)
     <script src="seo-config.js"></script>
     <script src="seo.js"></script>
   </head>
-  <body class="light-theme">
+  <body class="light-theme" data-catalog="bathware">
     <header class="site-header">
       <div class="container nav-wrap">
         <a href="index.html" class="logo" aria-label="Dream Home Enterprises home">
-          <img
-            src="logo.png"
-            alt="Dream Home Enterprises logo"
-            class="logo-image"
-            onerror="this.style.display='none'; this.nextElementSibling.querySelector('.logo-fallback').style.display='block';"
-          />
+          <img src="logo.png" alt="Dream Home Enterprises logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.querySelector('.logo-fallback').style.display='block';" />
           <span class="logo-meta">
             <span class="logo-fallback">Dream Home Enterprises</span>
             <span class="logo-tagline">Tiles & Bathware</span>
@@ -80,177 +54,37 @@ HOW TO ADD A NEW PRODUCT (BATHWARE)
 
     <main class="section catalog-header">
       <div class="container">
-        <h1 class="section-title">Bathware Collection</h1>
+        <h1 class="section-title">Bathware Collection — Jammalamadugu Showroom</h1>
         <p class="section-subtitle">
-          Elegant bath fittings and sanitary solutions designed for comfort and
-          style.
+          Elegant bath fittings and sanitary ware at our Jammalamadugu showroom —
+          serving Kadapa district, near Proddatur, Andhra Pradesh.
         </p>
         <p class="products-hint">
           Hover on any product card to enlarge it and reveal its description.
         </p>
 
-        <div class="filter-bar" data-target="#bathware-grid">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="wash-basins">Wash Basins</button>
-          <button class="filter-btn" data-filter="bathtubs">Bathtubs</button>
-          <button class="filter-btn" data-filter="showers">Showers</button>
-          <button class="filter-btn" data-filter="faucets-mixers">Faucets & Mixers</button>
-          <button class="filter-btn" data-filter="sanitary-ware">Sanitary Ware</button>
-          <button class="filter-btn" data-filter="accessories">Accessories</button>
-        </div>
-
-        <section id="bathware-grid" class="products-grid">
-          <!-- ADD NEW PRODUCTS HERE — duplicate a card block below -->
-          <div class="product-card" data-category="wash-basins">
-            <img src="images/bathware/bath-01.jpg" alt="Bathware 01" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wash Basins</span>
-              <h3>Oval Counter Basin - 560mm</h3>
-              <p class="muted">Size: 560mm | Finish: Gloss White</p>
-              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="bathtubs">
-            <img src="images/bathware/bath-02.jpg" alt="Bathware 02" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Bathtubs</span>
-              <h3>Freestanding Serenity Tub - 1700mm</h3>
-              <p class="muted">Size: 1700mm | Finish: Acrylic White</p>
-              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="showers">
-            <img src="images/bathware/bath-03.jpg" alt="Bathware 03" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Showers</span>
-              <h3>Rain Shower Head - 300mm</h3>
-              <p class="muted">Size: 300mm | Finish: Chrome</p>
-              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="faucets-mixers">
-            <img src="images/bathware/bath-04.jpg" alt="Bathware 04" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Faucets & Mixers</span>
-              <h3>Tall Mixer Tap - Brushed Gold</h3>
-              <p class="muted">Model: DHM-104 | Finish: Brushed Gold</p>
-              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="sanitary-ware">
-            <img src="images/bathware/bath-05.jpg" alt="Bathware 05" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Sanitary Ware</span>
-              <h3>Wall Hung WC Set - Compact</h3>
-              <p class="muted">Type: Wall Hung | Seat: Soft Close</p>
-              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="accessories">
-            <img src="images/bathware/bath-06.jpg" alt="Bathware 06" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Accessories</span>
-              <h3>Towel Rack Premium - 600mm</h3>
-              <p class="muted">Size: 600mm | Finish: Matte Black</p>
-              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="wash-basins">
-            <img src="images/bathware/bath-07.jpg" alt="Bathware 07" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wash Basins</span>
-              <h3>Rectangular Basin - 600mm</h3>
-              <p class="muted">Size: 600mm | Finish: Matt White</p>
-              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="bathtubs">
-            <img src="images/bathware/bath-08.jpg" alt="Bathware 08" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Bathtubs</span>
-              <h3>Corner Relax Tub - 1500mm</h3>
-              <p class="muted">Size: 1500mm | Finish: Acrylic</p>
-              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="showers">
-            <img src="images/bathware/bath-09.jpg" alt="Bathware 09" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Showers</span>
-              <h3>Hand Shower Kit - 3 Functions</h3>
-              <p class="muted">Model: SH-309 | Finish: Chrome</p>
-              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="faucets-mixers">
-            <img src="images/bathware/bath-10.jpg" alt="Bathware 10" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Faucets & Mixers</span>
-              <h3>Wall Mixer Tap - Twin Handle</h3>
-              <p class="muted">Model: FM-210 | Finish: Chrome</p>
-              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="sanitary-ware">
-            <img src="images/bathware/bath-11.jpg" alt="Bathware 11" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Sanitary Ware</span>
-              <h3>One Piece Closet - Sleek</h3>
-              <p class="muted">Type: One Piece | Seat: Soft Close</p>
-              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="accessories">
-            <img src="images/bathware/bath-12.jpg" alt="Bathware 12" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Accessories</span>
-              <h3>Soap Dispenser Set - Wall Mount</h3>
-              <p class="muted">Type: Wall Mount | Finish: Satin Steel</p>
-              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="wash-basins">
-            <img src="images/bathware/bath-13.jpg" alt="Bathware 13" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Wash Basins</span>
-              <h3>Table Top Bowl Basin - 420mm</h3>
-              <p class="muted">Size: 420mm | Finish: Gloss White</p>
-              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="faucets-mixers">
-            <img src="images/bathware/bath-14.jpg" alt="Bathware 14" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Faucets & Mixers</span>
-              <h3>Sensor Faucet - Smart Flow</h3>
-              <p class="muted">Type: Sensor | Finish: Chrome</p>
-              <a class="btn" href="tel:+91XXXXXXXXXX">Enquire</a>
-            </div>
-          </div>
-          <div class="product-card" data-category="accessories">
-            <img src="images/bathware/bath-15.jpg" alt="Bathware 15" loading="lazy" />
-            <div class="card-body">
-              <span class="badge">Accessories</span>
-              <h3>Mirror Cabinet - LED</h3>
-              <p class="muted">Size: 800mm | Finish: Frosted Glass</p>
-              <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Enquire</a>
-            </div>
-          </div>
-        </section>
+        <div class="filter-bar" data-catalog-filters="bathware"></div>
+        <section id="bathware-grid" class="products-grid"></section>
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-grid">
         <strong>Dream Home Enterprises</strong>
-        <span>Jammalamadugu, Andhra Pradesh, India</span>
-        <a href="https://maps.app.goo.gl/wJz6Hptb7gxwZo6w9" target="_blank"
-          >View on Map</a
-        >
+        <span>M.P.D.O Office Road, Jammalamadugu, Kadapa District, 516434, Andhra Pradesh, India.</span>
+        <a href="https://maps.app.goo.gl/wJz6Hptb7gxwZo6w9" target="_blank">View on Map</a>
+        <nav class="footer-links" aria-label="Site pages">
+          <a href="index.html">Home</a>
+          <a href="tiles.html">Tiles</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <span><a href="https://dreamhomeenterprises.in/">dreamhomeenterprises.in</a></span>
         <span>© 2026 Dream Home Enterprises. All rights reserved.</span>
       </div>
     </footer>
 
+    <script src="js/product-config.js"></script>
+    <script src="js/product-catalog.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

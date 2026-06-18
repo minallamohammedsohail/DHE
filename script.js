@@ -419,29 +419,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const filterBars = document.querySelectorAll(".filter-bar");
-  filterBars.forEach((bar) => {
-    const buttons = bar.querySelectorAll(".filter-btn");
-    const targetSelector = bar.getAttribute("data-target");
-    const grid = document.querySelector(targetSelector);
+  const initFilterBars = () => {
+    const filterBars = document.querySelectorAll(".filter-bar");
+    filterBars.forEach((bar) => {
+      const buttons = bar.querySelectorAll(".filter-btn");
+      const targetSelector = bar.getAttribute("data-target");
+      const grid = document.querySelector(targetSelector);
 
-    if (!grid) return;
+      if (!grid) return;
 
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        buttons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
 
-        const selected = btn.getAttribute("data-filter");
-        const cards = grid.querySelectorAll(".product-card");
-        cards.forEach((card) => {
-          const category = card.getAttribute("data-category");
-          const show = selected === "all" || selected === category;
-          card.style.display = show ? "block" : "none";
+          const selected = btn.getAttribute("data-filter");
+          const cards = grid.querySelectorAll(".product-card");
+          cards.forEach((card) => {
+            const category = card.getAttribute("data-category");
+            const show = selected === "all" || selected === category;
+            card.style.display = show ? "block" : "none";
+          });
         });
       });
     });
-  });
+  };
+
+  initFilterBars();
 
   // If a product card contains multiple images, transform it into
   // a small image carousel with previous/next arrow controls.
@@ -529,6 +533,45 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   setupMultiImageProductCards();
+
+  const refreshProductSearchCatalog = () => {
+    const cards = document.querySelectorAll(".product-card");
+    if (!cards.length) return;
+    searchCatalog = searchCatalog.filter((item) => !item.cardId);
+    const pathname = window.location.pathname || "";
+    cards.forEach((card, idx) => {
+      const id =
+        card.id || `product-card-${pathname.replace(/[^a-z0-9]/gi, "-")}-${idx}`;
+      card.id = id;
+      const title =
+        card.querySelector("h3")?.textContent?.trim() ||
+        card.querySelector(".badge")?.textContent?.trim() ||
+        "Product";
+      const subtitle = card.querySelector("p.muted")?.textContent?.trim() || "";
+      const type =
+        card.querySelector(".badge")?.textContent?.trim() ||
+        card.getAttribute("data-category") ||
+        "";
+      const thumbImg = card.querySelector("img");
+      const thumbSrc = thumbImg ? thumbImg.currentSrc || thumbImg.src : "";
+      const keywords = `${title} ${subtitle} ${type} ${card.getAttribute("data-category") || ""}`.trim();
+      searchCatalog.unshift({
+        title,
+        subtitle,
+        type,
+        keywords,
+        thumbSrc,
+        url: `${pathname}#${id}`,
+        cardId: id,
+      });
+    });
+  };
+
+  document.addEventListener("dhe-products-rendered", () => {
+    initFilterBars();
+    setupMultiImageProductCards();
+    refreshProductSearchCatalog();
+  });
 
   const productCardImages = document.querySelectorAll(".product-card img");
   if (productCardImages.length > 0) {
